@@ -5,7 +5,7 @@
 
 /************************************************************************************************/
 /* Custom CSS for Firefox 60+ *******************************************************************/
-/* version 1.9.3 ********************************************************************************/
+/* version 1.9.5 ********************************************************************************/
 /************************************************************************************************/
 
 /*************************************************************************************************
@@ -103,8 +103,9 @@
 /* @import url(./config/color_variables_transparent.css); /**/  /* <- (semi-)'transparent' colors */
 /* @import url(./config/color_variables_aeroglass.css); /**/  /* <- 'AeroGlass' colors / Win10+Glass8 fix can be found in 'toolbars' area */
 
-/* Darker "Dark" default theme ******************************************************************/
+/* Darker "Dark" default theme - only use one at a time *****************************************/
 /* @import url(./css/toolbars/default_dark_theme_darker.css); /**/
+/* @import url(./css/toolbars/default_dark_theme_darker_v2.css); /**/
 
 
 /************************************************************************************************/
@@ -358,6 +359,7 @@
 
 /* other tab settings ***************************************************************************/
 @import url(./css/tabs/tab_icon_colors.css); /**/
+/* @import url(./css/tabs/newtab_button_always_visible.css); /**/
 /* @import url(./css/tabs/tab_icon_inactive_tabs_lower_opacity.css); /**/
 @import url(./css/tabs/tab_maxwidth.css); /**/
 @import url(./css/tabs/tab_titles_remove_blur.css); /**/
