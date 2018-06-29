@@ -4,17 +4,18 @@
 
 
 :root {
-  --classic_squared_tabs_tab_height: 26px;
+  --classic_squared_tabs_tab_height: 1px;
   --classic_squared_tabs_tab_default_loading_icon_color: #0A84FF;
   --classic_squared_tabs_active_tab: linear-gradient(to top,#f9f9fa,#f9f9fa,#f9f9fa);
   --classic_squared_tabs_hovered_tabs: linear-gradient(to top,#cac7c1,#d5d2cc,#e8e6e2);
   --classic_squared_tabs_other_tabs: linear-gradient(to top,#aeaba5,#c1beb7,#c9c6be);
-  --classic_squared_tabs_unloaded_tabs: linear-gradient(to top,#aeaba5,#c1beb7,#c9c6be);
-  --classic_squared_tabs_lwt-dark_hovered_tabs: linear-gradient(hsla(0,0%,80%,.5), hsla(0,0%,60%,.5) 80%);
-  --classic_squared_tabs_lwt-dark_other_tabs: linear-gradient(hsla(0,0%,60%,.5), hsla(0,0%,45%,.5) 80%);
-  --classic_squared_tabs_lwt-bright_hovered_tabs: linear-gradient(hsla(0,0%,60%,.6), hsla(0,0%,45%,.6) 80%);
-  --classic_squared_tabs_lwt-bright_other_tabs: linear-gradient(hsla(0,0%,40%,.6), hsla(0,0%,30%,.6) 80%);
-  --classic_squared_tabs-border_size: 1px;
+  --classic_squared_tabs_unloaded_tabs: linear-gradient(to top,#ff0000,#000000,#000000);
+  --classic_squared_tabs_unread_tabs: #bebedc;
+  --classic_squared_tabs_lwt-dark_hovered_tabs: #dcdcdc;
+  --classic_squared_tabs_lwt-dark_other_tabs: #c8c8c8;
+  --classic_squared_tabs_lwt-bright_hovered_tabs: #f0f0f0;
+  --classic_squared_tabs_lwt-bright_other_tabs: #f0f0f0;
+  --classic_squared_tabs-border_size: 0px;
   --classic_squared_tabs-border1: #5f7181;
   --classic_squared_tabs-border2: rgba(0,0,0,.2);
   --classic_squared_tabs-border3: rgba(0,0,0,.5);
@@ -65,7 +66,22 @@
 
 /* unloaded/pending tabs color */
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[pending] .tab-content {
-  background-image: var(--classic_squared_tabs_unloaded_tabs) !important;
+  background-image: var(--classic_squared_tabs_unloaded_tabs) !important; !important;
+}
+
+/* hovered unloaded/pending tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover[pending] .tab-content {
+  background-image: var(--classic_squared_tabs_hovered_unloaded_tabs) !important; !important;
+}
+
+/* unread tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[unread] .tab-content {
+  background-image: var(--classic_squared_tabs_unread_tabs) !important;
+}
+
+/* unread tabs color */
+#TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover[unread] .tab-content {
+  background-image: var(--classic_squared_tabs_hovered_unread_tabs) !important;
 }
 
 /* tab border color */
@@ -104,19 +120,19 @@
 /* lightweight theme tab colors*/
 .tabs-newtab-button:-moz-lwtheme-darktext,
 .tabbrowser-tab:not([selected]):-moz-lwtheme-darktext .tab-content {
-  background-image: var(--classic_squared_tabs_lwt-dark_other_tabs) !important;
+  background-color: var(--classic_squared_tabs_lwt-dark_other_tabs) !important;
 }
 .tabs-newtab-button:hover:-moz-lwtheme-darktext,
 .tabbrowser-tab:not([selected]):hover:-moz-lwtheme-darktext .tab-content {
-  background-image: var(--classic_squared_tabs_lwt-dark_hovered_tabs) !important;
+  background-color: var(--classic_squared_tabs_lwt-dark_hovered_tabs) !important;
 }
 .tabs-newtab-button:-moz-lwtheme-brighttext,
 .tabbrowser-tab:not([selected]):-moz-lwtheme-brighttext .tab-content {
-  background-image: var(--classic_squared_tabs_lwt-bright_other_tabs) !important;
+  background-color: var(--classic_squared_tabs_lwt-bright_other_tabs) !important;
 }
 .tabs-newtab-button:hover:-moz-lwtheme-brighttext,
 .tabbrowser-tab:not([selected]):hover:-moz-lwtheme-brighttext .tab-content {
-  background-image: var(--classic_squared_tabs_lwt-bright_hovered_tabs) !important;
+  background-color: var(--classic_squared_tabs_lwt-bright_hovered_tabs) !important;
 }
 .tabbrowser-tab:not([selected]):not(:hover):-moz-lwtheme-brighttext {
   background: unset !important;
@@ -133,26 +149,26 @@
 }
 
 .tabbrowser-tab[selected]:-moz-lwtheme-darktext .tab-content {
-  border-top: 1px solid rgba(0,0,0,.5) !important;
-  border-left: 1px solid rgba(0,0,0,.4) !important; 
-  border-right: 1px solid rgba(0,0,0,.4) !important;
+  border-top: 0px solid rgba(0,0,0,.5) !important;
+  border-left: 0px solid rgba(0,0,0,.4) !important; 
+  border-right: 0px solid rgba(0,0,0,.4) !important;
 }
 .tabbrowser-tab[selected]:-moz-lwtheme-brighttext .tab-content {
-  border-top: 1px solid rgba(255,255,255,.6) !important;
-  border-left: 1px solid rgba(255,255,255,.2) !important; 
-  border-right: 1px solid rgba(255,255,255,.2) !important; 
+  border-top: 0px solid rgba(255,255,255,.6) !important;
+  border-left: 0px solid rgba(255,255,255,.2) !important; 
+  border-right: 0px solid rgba(255,255,255,.2) !important; 
 }
 #TabsToolbar:-moz-lwtheme .tabs-newtab-button:-moz-lwtheme-darktext,
 .tabbrowser-tab .tab-content:-moz-lwtheme-darktext {
-  border-top: 1px solid rgba(0,0,0,.2) !important;
-  border-left: 1px solid rgba(0,0,0,.2) !important; 
-  border-right: 1px solid rgba(0,0,0,.2) !important; 
+  border-top: 0px solid rgba(0,0,0,.2) !important;
+  border-left: 0px solid rgba(0,0,0,.2) !important; 
+  border-right: 0px solid rgba(0,0,0,.2) !important; 
 }
 #TabsToolbar:-moz-lwtheme .tabs-newtab-button:-moz-lwtheme-brighttext,
 .tabbrowser-tab .tab-content:-moz-lwtheme-brighttext {
-  border-top: 1px solid rgba(255,255,255,.6) !important;
-  border-left: 1px solid rgba(255,255,255,.2) !important; 
-  border-right: 1px solid rgba(255,255,255,.2) !important; 
+  border-top: 0px solid rgba(255,255,255,.6) !important;
+  border-left: 0px solid rgba(255,255,255,.2) !important; 
+  border-right: 0px solid rgba(255,255,255,.2) !important; 
 }
 
 /********************************************/

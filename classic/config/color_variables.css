@@ -21,10 +21,13 @@
   --tabs_toolbar_border-tnot_normal_mode: var(--tabs-border-color) !important;
   --colored_menubar_background_image: linear-gradient(#f9f9fa,#f9f9fa) !important;  /* (to bottom,#FFCC99,#FFCC99) */
   --colored_menubar_text_color: black !important;
-  --classic_squared_tabs_active_tab: linear-gradient(to top,#f9f9fa,#f9f9fa,#f9f9fa) !important; /* (to bottom,#FF8800,#FFCC99) */
-  --classic_squared_tabs_hovered_tabs: linear-gradient(to top,#cac7c1,#d5d2cc,#e8e6e2) !important; /* (to bottom,#FF9900,#FF6600) */
-  --classic_squared_tabs_other_tabs: linear-gradient(to top,#aeaba5,#c1beb7,#c9c6be) !important; /* (to bottom,#FFCC99,#CCCCCC) */
-  --classic_squared_tabs_unloaded_tabs: linear-gradient(to top,#aeaba5,#c1beb7,#c9c6be) !important; /* (to bottom,#FFCC99,#CCCCCC) */
+  --classic_squared_tabs_active_tab: linear-gradient(#f0f0f0,#f0f0f0) !important; /* (to bottom,#FF8800,#FFCC99) */
+  --classic_squared_tabs_hovered_tabs: linear-gradient(#b4b4b4,#b4b4b4) !important; /* (to bottom,#FF9900,#FF6600) */
+  --classic_squared_tabs_other_tabs: linear-gradient(#c7c7c7,#c7c7c7) !important; /* (to bottom,#FFCC99,#CCCCCC) */
+  --classic_squared_tabs_hovered_unloaded_tabs: linear-gradient(#bebea0,#bebea0) !important; /* (to bottom,#FFCC99,#CCCCCC) */
+  --classic_squared_tabs_unloaded_tabs: linear-gradient(#d2d2b4,#d2d2b4) !important; /* (to bottom,#FFCC99,#CCCCCC) */
+  --classic_squared_tabs_unread_tabs: linear-gradient(#bebedc,#bebedc) !important; /* (to bottom,#FFCC99,#CCCCCC) */
+  --classic_squared_tabs_hovered_unread_tabs: linear-gradient(#aaaac8,#aaaac8) !important; /* (to bottom,#FFCC99,#CCCCCC) */
   --classic_squared_tabs-border_size: 1px;
   --classic_squared_tabs-border1: #5f7181 !important;
   --classic_squared_tabs-border2: rgba(0,0,0,.2) !important;

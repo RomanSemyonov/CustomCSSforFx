@@ -84,7 +84,7 @@
   filter: brightness(0.9) contrast(175%) !important;
 }
 #main-window #navigator-toolbox #nav-bar :-moz-any(#back-button, #forward-button)[disabled] .toolbarbutton-icon {
-  opacity: 1.0 !important;
+  opacity: 0.0 !important;
   filter: grayscale(50%) !important;
 }
 

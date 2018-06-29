@@ -37,11 +37,11 @@
   Some CSS tweaks won't work, if '@namespace' references are used inside .css files!
 
   EXPERIMENTAL settings are for testing only!
-  
+
   GENERAL SUPPORT / DISCUSSION THREAD: github.com/Aris-t2/CustomCSSforFx/issues/109
 
   All options have significant categories and names.
-  
+
   BASIC OVERVIEW - settings this file contains:
   CONFIGURATION FILES
   - general variables / color variables (default browser theme only)
@@ -124,10 +124,10 @@
 /* @import url(./css/buttons/buttons_on_navbar_squared_buttons.css); /**/
 
 /* smaller buttons in 'compact' mode - Classic Toolbar button add-ons 'small buttons' mode ******/
-/* @import url(./css/buttons/buttons_on_navbar_more_compact_mode.css); /**/
+@import url(./css/buttons/buttons_on_navbar_more_compact_mode.css); /**/
 
 /* icon appearance - only use one at a time (custom icons do not scale in HiDPI modes) **********/
-@import url(./css/buttons/icons_colorized.css); /**/
+/* @import url(./css/buttons/icons_colorized.css); /**/
 /* @import url(./css/buttons/icons_white_icons.css); /**/
 /* @import url(./css/buttons/icons_custom_icons.css); /**/  /* aka "Mozilla Mix" from CTB */
 /* @import url(./css/buttons/icons_custom_icons_fx1.css); /**/
@@ -166,8 +166,8 @@
 
 /* other button settings ************************************************************************/
 /* @import url(./css/buttons/forward_button_hide_when_disabled.css); /**/
-/* @import url(./css/buttons/back_and_forward_separated_history_popups.css); /**/
-/* @import url(./css/buttons/back_and_forward_leftclick_history_popup_hidden.css); /**/
+@import url(./css/buttons/back_and_forward_separated_history_popups.css); /**/
+@import url(./css/buttons/back_and_forward_leftclick_history_popup_hidden.css); /**/
 /* @import url(./css/buttons/zoom_buttons_hide_reset.css); /**/
 
 /* CUSTOM BACK & FORWARD BUTTONS appearance - only use one at a time ****************************/
@@ -187,6 +187,7 @@
 /* @import url(./css/buttons/custom_backforward_small_ff3_strata_red.css); /**/
 /* @import url(./css/buttons/custom_backforward_small_ie8.css); /**/
 /* @import url(./css/buttons/custom_backforward_small_ie9.css); /**/
+@import url(./css/buttons/custom_backforward_small_rs.css); /**/
 /* @import url(./css/buttons/custom_backforward_small_kempelton.css); /**/
 
 
@@ -202,7 +203,7 @@
 @import url(./css/buttons/appbutton_popup_icons_colorized.css); /**/
 /* @import url(./css/buttons/appbutton_popup_sync_hidden.css); /**/
 /* @import url(./css/buttons/appbutton_popup_trackingprotection_hidden.css); /**/
-/* @import url(./css/buttons/appbutton_popup_panelarrow_hidden.css); /**/ 
+/* @import url(./css/buttons/appbutton_popup_panelarrow_hidden.css); /**/
 
 /************************************************************************************************/
 /* button on navigation toolbar *****************************************************************/
@@ -236,7 +237,7 @@
 /************************************************************************************************/
 
 /* button in titlebar - only use one at a time **************************************************/
-@import url(./css/buttons/appbutton_in_titlebar.css); /**/ /* <-- label only */
+/* @import url(./css/buttons/appbutton_in_titlebar.css); /**/ /* <-- label only */
 /* @import url(./css/buttons/appbutton_in_titlebar_icon_only.css); /**/
 /* @import url(./css/buttons/appbutton_in_titlebar_icon_only_dark.css); /**/
 /* @import url(./css/buttons/appbutton_in_titlebar_icon_only_grey.css); /**/
@@ -269,7 +270,7 @@
 /* custom tab colors are set inside color_variables***.css file(s) ******************************/
 
 /* remove top corner roundness ******************************************************************/
-/* @import url(./css/tabs/classic_squared_tabs_fully_squared.css); /**/
+@import url(./css/tabs/classic_squared_tabs_fully_squared.css); /**/
 
 /************************************************************************************************/
 /* TABS TOOLBAR POSITION (below titlebar / below navigation toolbar / below main content) *******/
@@ -331,10 +332,10 @@
 /* @import url(./css/tabs/tab_throbber_orange_ubuntu.css); /**/
 
 /* tab close icon settings - only use one at a time *********************************************/
-@import url(./css/tabs/tab_close_always_visible.css); /**/
+/* @import url(./css/tabs/tab_close_always_visible.css); /**/
 /* @import url(./css/tabs/tab_close_on_active_tab_only.css); /**/
 /* @import url(./css/tabs/tab_close_show_on_hover_only.css); /**/
-/* @import url(./css/tabs/tab_close_hidden.css); /**/
+@import url(./css/tabs/tab_close_hidden.css); /**/
 /* @import url(./css/tabs/tab_close_hidden_for_only_one_visible_tab.css); /**/
 /* @import url(./css/tabs/tab_close_at_tabs_start.css); /**/
 /* @import url(./css/tabs/tab_close_icon_size.css); /**/
@@ -358,9 +359,9 @@
 /* other tab settings ***************************************************************************/
 @import url(./css/tabs/tab_icon_colors.css); /**/
 /* @import url(./css/tabs/tab_icon_inactive_tabs_lower_opacity.css); /**/
-/* @import url(./css/tabs/tab_maxwidth.css); /**/
-/* @import url(./css/tabs/tab_titles_remove_blur.css); /**/
-/* @import url(./css/tabs/alltabs_button_always_visible.css); /**/
+@import url(./css/tabs/tab_maxwidth.css); /**/
+@import url(./css/tabs/tab_titles_remove_blur.css); /**/
+@import url(./css/tabs/alltabs_button_always_visible.css); /**/
 /* @import url(./css/tabs/pinnedtab_empty_favicon_hidden.css); /**/
 /* edit target file to select which items to hide ***********************************************/
 /* @import url(./css/tabs/tab_context_menuitems_visibility.css); /**/
@@ -394,7 +395,7 @@
 /* @import url(./css/generalui/sidebar_appearance_lwtheme_dark.css); /**/
 
 /* findbar **************************************************************************************/
-/* @import url(./css/generalui/findbar_on_top.css); /**/
+@import url(./css/generalui/findbar_on_top.css); /**/
 /* @import url(./css/generalui/findbar_show_full_quickfindbar.css); /**/
 /* findbar - close icon position - only use one at a time ***************************************/
 /* @import url(./css/generalui/findbar_on_top_close_at_findbars_start.css); /**/
@@ -421,7 +422,7 @@
 /* @import url(./css/generalui/close_icon_firefox3.css); /**/
 
 /* SEARCHBAR ************************************************************************************/
-@import url(./css/generalui/searchbar_glassplus_indicator_hidden.css); /**/
+/* @import url(./css/generalui/searchbar_glassplus_indicator_hidden.css); /**/
 /* @import url(./css/generalui/searchbar_go_button_hidden.css); /**/
 
 /* search engine settings - only use one at a time **********************************************/
@@ -494,7 +495,7 @@
 @import url(./css/toolbars/general_toolbar_colors.css); /**/
 
 /* AeroGlass TOOLBARS - separated - set per toolbar / WIN10 fix for GLASS8 **********************/
-/* @import url(./css/toolbars/general_toolbar_colors_navigation_toolbar_aeroglass.css); /**/
+@import url(./css/toolbars/general_toolbar_colors_navigation_toolbar_aeroglass.css); /**/
 /* @import url(./css/toolbars/general_toolbar_colors_bookmarks_toolbar_aeroglass.css); /**/
 /* @import url(./css/toolbars/general_toolbar_colors_tabs_toolbar_aeroglass.css); /**/
 /* Windows 10 fix for Glass8 - Glass8 required for 'Windows 7'-like window transparency */
@@ -539,7 +540,7 @@
 
 /* page action button (three dots) / separator **************************************************/
 @import url(./css/locationbar/pageaction_separator_in_location_bar_hidden.css); /**/
-/* @import url(./css/locationbar/pageaction_button_in_location_bar_hidden.css); /**/
+@import url(./css/locationbar/pageaction_button_in_location_bar_hidden.css); /**/
 /* @import url(./css/locationbar/pageaction_button_rotated_and_last_pageaction_button.css); /**/
 
 /* star button **********************************************************************************/
@@ -557,7 +558,7 @@
 
 /* NOTE: 'Classic popup with two lined results' will stop working soon when Mozilla drops XBL ****
 		 support. See https://bugzilla.mozilla.org/show_bug.cgi?id=1397874 **********************/
-		 
+
 /* [!] 'Classic popup with two lined results' removes 'oneoff' searches at popups bottom ********/
 /* popup content order/appearance - only use one at a time **************************************/
 /* @import url(./css/locationbar/ac_popup_classic_with_two_lines.css); /**/
