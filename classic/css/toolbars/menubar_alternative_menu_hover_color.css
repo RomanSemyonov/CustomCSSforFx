@@ -3,10 +3,11 @@
 /****************************************************************************************/
 
 
-#new-tab-button {
-  visibility: visible !important;
+#main-menubar > menu {
+  -moz-appearance: none !important;
+  background-color: transparent !important;
 }
-
-.tabs-newtab-button {
-  visibility: collapse !important;
+#main-menubar > menu:-moz-any(:hover,[open],[_moz-menuactive]) {
+  background: Highlight !important;
+  color: HighlightText !important;
 }
