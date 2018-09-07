@@ -177,7 +177,7 @@
 @import "./css/buttons/back_and_forward_leftclick_history_popup_hidden.css"; /**/
 /* @import "./css/buttons/zoom_buttons_hide_reset.css"; /**/
 /* @import "./css/buttons/overflow_button_rotate_on_open.css"; /**/
-/* @import "./css/buttons/button_popup_panelarrow_hidden.css"; /**/
+@import "./css/buttons/button_popup_panelarrow_hidden.css"; /**/
 
 /* CUSTOM BACK & FORWARD BUTTONS appearance - [only use one at a time] **************************/
 /* @import "./css/buttons/custom_backforward_connected_to_location_bar.css"; /**/
@@ -431,7 +431,7 @@
 /* @import "./css/generalui/close_icon_firefox3.css"; /**/
 
 /* SEARCHBAR ************************************************************************************/
-/* @import "./css/generalui/searchbar_glassplus_indicator_hidden.css"; /**/
+@import "./css/generalui/searchbar_glassplus_indicator_hidden.css"; /**/
 /* @import "./css/generalui/searchbar_go_button_hidden.css"; /**/
 
 /* searchbar popup ******************************************************************************/
