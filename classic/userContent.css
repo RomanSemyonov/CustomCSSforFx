@@ -38,11 +38,13 @@
 /* NOTE: 'Version number for add-ons' will stop working soon when Mozilla drops XBL support. *****
 		 See https://bugzilla.mozilla.org/show_bug.cgi?id=1397874 *******************************/
 
-/* version number for add-ons *******************************************************************/
+/* version number for add-ons - [only use one at a time] ****************************************/
+/* [!] version number's xml file now restores add-on 'description' on Firefox 64+ ***************/
 @import "./css/aboutaddons/addonlists_show_addon_version_number.css"; /**/
+/* @import "./css/aboutaddons/addonlists_show_addon_version_number_hide_description.css";
 
 /* show 'last updated' date for add-ons *********************************************************/
- @import "./css/aboutaddons/addonlists_show_addon_date_last_updated.css"; /**/
+@import "./css/aboutaddons/addonlists_show_addon_date_last_updated.css"; /**/
 
 /* addons page appearance - [only use one at a time] ********************************************/
 @import "./css/aboutaddons/addons_manager_alternative_appearance.css"; /**/
