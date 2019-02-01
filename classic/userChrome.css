@@ -5,7 +5,7 @@
 
 /************************************************************************************************/
 /* Custom CSS for Firefox 60+ *******************************************************************/
-/* version 2.3.7 ********************************************************************************/
+/* version 2.3.8 ********************************************************************************/
 /************************************************************************************************/
 
 /*************************************************************************************************
@@ -377,6 +377,7 @@
 /* [!] some internal pages only show default browser title **************************************/
 /* [!] might not always work correctly **********************************************************/
 /* @import "./css/tabs/tab_title_in_firefox_titlebar.css"; /**/
+/* @import "./css/tabs/tab_title_in_firefox_titlebar_fx65.css"; /**/
 /* @import "./css/tabs/tab_title_in_firefox_titlebar_centered.css"; /**/
 
 /* restore empty/missing tab favicon - [only use one at a time] *********************************/
@@ -568,8 +569,8 @@
 /* @import "./css/toolbars/bookmarks_toolbar_simulate_second_bm_toolbar_fx65.css"; /**/
 
 /* BOOKMARKS TOOLBAR above navigation toolbar - [only use one at a time] ************************/
-/* @import "./css/toolbars/bookmarks_toolbar_above_navigation_boolbar.css"; /**/
-/* @import "./css/toolbars/bookmarks_toolbar_above_navigation_boolbar_when_tab_not_top.css"; /**/
+/* @import "./css/toolbars/bookmarks_toolbar_above_navigation_toolbar.css"; /**/
+/* @import "./css/toolbars/bookmarks_toolbar_above_navigation_toolbar_when_tab_not_top.css"; /**/
 
 /* BOOKMARKS TOOLBAR - MULTIPLE LINES ***********************************************************/
 /* [!] the amount of visible bookmark items is limited internally to ~90-110 bookmarks **********/
