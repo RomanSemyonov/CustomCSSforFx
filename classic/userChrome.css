@@ -5,7 +5,7 @@
 
 /************************************************************************************************/
 /* Custom CSS for Firefox 60+ *******************************************************************/
-/* version 2.4.7 ********************************************************************************/
+/* version 2.4.9 ********************************************************************************/
 /************************************************************************************************/
 
 /*************************************************************************************************
@@ -212,6 +212,9 @@
 /* menubar - toolbar button appearance **********************************************************/
 /* @import "./css/buttons/buttons_on_menubar_toolbar_classic_appearance.css"; /**/
 
+/* tabs toolbar - toolbar button appearance *****************************************************/
+/* @import "./css/buttons/buttons_on_tabs_toolbar_classic_appearance.css"; /**/			/* <--- EXPERIMENTAL */
+
 /* other button settings ************************************************************************/
 /* @import "./css/buttons/forward_button_hide_when_disabled.css"; /**/
 @import "./css/buttons/back_and_forward_separated_history_popups.css"; /**/
@@ -376,9 +379,10 @@
 /* [!] not compatible with 'tabs toolbar - below main content' option ***************************/
 /* [!] not compatible with 'tabs below navigation toolbar' option on Firefox 65+ ****************/
 /* [!] only compatible with 'tabs below navigation toolbar Fx 65 v2' option on Firefox 65+ ******/
-/* [!] v1 is not compatible with Firefox 66+ ****************************************************/
+/* [!] v1 and v2 are not compatible with Firefox 66+ ********************************************/
 /* @import "./css/tabs/tabs_multiple_lines.css"; /**/  /* <--- EXPERIMENTAL */
 /* @import "./css/tabs/tabs_multiple_lines_v2.css"; /**/  /* <--- EXPERIMENTAL */
+/* @import "./css/tabs/tabs_multiple_lines_v3.css"; /**/  /* <--- EXPERIMENTAL */
 
 /* TAB TITLE IN FIREFOX TITLEBAR (Windows only) *************************************************/
 /* [!] some internal pages only show default browser title **************************************/
@@ -671,17 +675,17 @@
 /* [!] - Firefox 60-63: popup code is XBL (xml) based like on older Firefox versions ************/
 /* [!] - Firefox 60-63: option removes 'oneoff' searches at popups bottom ***********************/
 /* [!] - Firefox 60-63: option throws unfixable warnings in 'error console' in ******************/
-/* [!] - Firefox 64+: popup width can not be automatically detected by the option anymore *******/
+/* [!] - Firefox 64+: popup width can not be automatically detected anymore *********************/
 /* [!] - Firefox 64+: popup width has to be set manually inside /config/ files ******************/
-/* [!] - Firefox 60-64+: the option for Firefox 64+ also works on Firefox 60-63 *****************/
 /* @import "./css/locationbar/ac_popup_classic_with_two_lines.css"; /**/  /* <--- old autocomplete popup for Fx 60-62*/
+/* @import "./css/locationbar/ac_popup_classic_with_url_only.css"; /**/
 /* @import "./css/locationbar/ac_popup_classic_with_two_lines_fx63.css"; /**/  /* <--- old autocomplete popup for Fx 63 */
+/* @import "./css/locationbar/ac_popup_classic_with_url_only_fx63.css"; /**/
 /* @import "./css/locationbar/ac_popup_classic_with_two_lines_fx64.css"; /**/  /* <--- old autocomplete popup for Fx 64+ */
 /* @import "./css/locationbar/ac_popup_classic_with_url_only_fx64.css"; /**/
+/* @import "./css/locationbar/ac_popup_classic_with_two_lines_fx64_star_at_the_end.css"; /**/  /* <--- old autocomplete popup for Fx 64+ & star icon at the end */
+/* @import "./css/locationbar/ac_popup_classic_with_url_only_fx64_star_at_the_end.css"; /**/
 
-/* Classic popup & url only: requires 'Classic popup with two lined results' option (Fx60-64!) **/
-/* @import "./css/locationbar/ac_popup_classic_with_url_only.css"; /**/
- 
 /* result menuitem settings/appearance **********************************************************/
 /* @import "./css/locationbar/ac_popup_firefox_background_logo.css"; /**/
 /* @import "./css/locationbar/ac_popup_result_highlighting_aero.css"; /**/
