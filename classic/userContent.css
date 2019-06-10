@@ -27,7 +27,7 @@
 
   All options have significant categories and names.
 
-  GENERAL SUPPORT / DISCUSSION THREAD: github.com/Aris-t2/CustomCSSforFx/issues/163
+  GENERAL SUPPORT / DISCUSSION THREAD: github.com/Aris-t2/CustomCSSforFx/issues/211
 
 *************************************************************************************************/
 
@@ -122,6 +122,9 @@
 /* [!] custom size values only compatible with 'web content' scrollbars at the moment ***********/
 /* [!] more info inside 'custom_scrollbar_appearance.css' file **********************************/
 /* @import "./config/custom_scrollbar_appearance.css"; /**/		/* <--- EXPERIMENTAL */
+
+/* Autofill forms (Firefox 67+ only) - disable CSS3 filter background ***************************/
+/* @import "./css/webcontent/autofill_forms_background_white.css"; /**/	
 
 
 /************************************************************************************************/
