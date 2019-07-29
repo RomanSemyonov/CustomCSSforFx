@@ -1,0 +1,69 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+@import "./addons_manager_alternative_appearance.css";
+
+@-moz-document  url-prefix(chrome://mozapps/content/extensions/aboutaddons.html) {
+
+	body > div#main {
+	  margin-inline-start: -1px !important;
+	  margin-inline-end: 1px !important;
+	  margin-bottom: 4px !important;
+	  max-width: unset !important;
+	  box-shadow: unset !important;
+	  border: 0 !important;
+	  border-radius: 0 !important;
+	  background: linear-gradient(to bottom right, #f5f5f5,-moz-Dialog,#f5f5f5,-moz-Dialog) !important;
+	}
+
+	.addon.card {
+	  margin-bottom: 1px !important;
+	  box-shadow: unset !important;
+	  border: 0 !important;
+	  border-radius: 0 !important;
+	}
+
+	addon-card:not([expanded="true"]) .addon.card:hover {
+	  background: Highlight !important;
+	}
+
+	addon-card:not([expanded="true"]) .addon.card:hover .card-contents :-moz-any(div,span) {
+	  color: HighlightText !important;
+	}
+
+	/* remove headers like 'Enabled'/'Disabled' */
+	.list-section-heading {
+	  display: none !important;
+	}
+
+	/* reduce opacity for disabled add-ons */
+	section[section="1"] {
+	  color: grey !important;
+	  opacity: 0.6 !important;
+	  filter: greyscale !important; 
+	}
+	
+	/* workaround for Fx 70+ to not have reduced opacity twice */
+	addon-card:not([expanded]) > .addon.card[active="false"],
+	addon-card:not([expanded])[panelopen] > .addon.card[active="false"],
+	addon-card:not([expanded]) > .addon.card[active="false"]:focus-within,
+	addon-card:not([expanded]) > .addon.card[active="false"]:hover {
+	  opacity: 1 !important;
+	  transition: unset !important;
+	}
+
+	/* remove advertising other add-ons */
+	recommended-themes-section,
+	recommended-extensions-section {
+	  display: none !important;
+	}
+
+}
+
+@-moz-document  url-prefix(chrome://mozapps/content/extensions/extensions.xul),
+				url-prefix(about:addons) {
+	#addons-page .main-content{
+	  -moz-margin-start: -1px !important;
+	}
+}
