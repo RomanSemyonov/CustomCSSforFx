@@ -81,8 +81,15 @@
 
 /* Max-height for items visible without scrolling */
 #urlbarView-results {
-  height: auto !important;
-  max-height: calc(47.5px * 12) !important;
+  height: var(--ac_popup_height) !important;
+  max-height: var(--ac_popup_maxheight) !important;
+}
+
+#urlbar-results{
+  overflow: hidden !important;
+  overflow-y: visible !important;
+  height: var(--ac_popup_height) !important;
+  max-height: var(--ac_popup_maxheight) !important;
 }
 
 /* popup width [normal mode] */
@@ -156,9 +163,14 @@
   overflow-y: auto !important;
 }
 
-/* adjust popup position on Fx 70+ */
-#urlbar-results {
-  left: unset !important;
-  right: unset !important;
+/* Position of bookmark tags */
+#urlbar-results .urlbarView-row .urlbarView-tags {
+  position: absolute !important;
+}
+#urlbar-results:-moz-locale-dir(ltr) .urlbarView-row .urlbarView-tags {
+  right: 4px;
+}
+#urlbar-results:-moz-locale-dir(rtl) .urlbarView-row .urlbarView-tags {
+  left: 4px;
 }
 

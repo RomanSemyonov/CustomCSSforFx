@@ -13,12 +13,19 @@
 
 /* move bookmarks star and other icon to items right */
 #urlbar-results .urlbarView-row .urlbarView-type-icon{
-  -moz-margin-start: calc( var(--ac_popup_width) - 26px ) !important;
+  -moz-margin-start: calc( var(--ac_popup_width) - 38px ) !important;
 }
-
 
 /* Position of type icon (bookmark, switch-to-tab...) */
 #urlbar-results .urlbarView-row .urlbarView-type-icon {
   top: 6px !important;
   bottom: unset !important;
+}
+
+/* Tags */
+#urlbar-results:-moz-locale-dir(ltr) .urlbarView-row .urlbarView-tags {
+  right: 30px !important;
+}
+#urlbar-results:-moz-locale-dir(rtl) .urlbarView-row .urlbarView-tags {
+  left: 30px !important;
 }
