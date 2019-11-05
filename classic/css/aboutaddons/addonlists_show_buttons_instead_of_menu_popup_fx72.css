@@ -1,0 +1,98 @@
+/* Firefox Quantum userChrome.css tweaks ************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+@-moz-document  url-prefix(chrome://mozapps/content/extensions/aboutaddons.html) {
+	.more-options-menu panel-item {
+	  background: white !important;
+	  color: black !important;
+	  margin: 0 1px;
+	  border: 1px solid lightgrey !important;
+	}
+	
+	@supports -moz-bool-pref("browser.in-content.dark-mode") {
+	  @media (prefers-color-scheme: dark) {
+		.more-options-menu panel-item {
+		  background: black !important;
+		  color: white !important;
+	  }
+	}}
+	
+	/* reduce size of default buttons */
+	link:-moz-any([href$="panel-item.css"],[href$="panel-list.css"]) ~ button {
+	  width: unset !important;
+	  padding: 2px 5px !important; 
+	}
+	
+	/* remove three dots button */
+	.addon.card .more-options-menu .more-options-button {
+	  visibility: hidden !important;
+	}
+
+	/* remove button icon */
+	panel-item {
+	  --icon: unset !important;
+	}
+
+	/* restore buttons */
+	addon-list .more-options-menu :-moz-any(addon-options,plugin-options) panel-list {
+	  position: relative !important;
+	  display: block !important;
+	  overflow: hidden !important;
+	  margin-top: -25px;
+	  box-shadow: none !important;
+	  background: unset !important;
+	  border: unset !important;
+	  box-shadow: unset !important;
+	  min-width: unset !important;
+	  width: unset !important;
+	}
+
+	div.arrow.top + div.list {
+	  display: flex !important;
+	  flex-flow: row wrap !important;
+	  justify-content: flex-start !important;
+	}
+
+	panel-item[action="preferences"] {
+	  order: -1;
+	}
+	
+	panel-item[badged] {
+	  border: 1px solid Highlight !important;
+	}
+
+	:-moz-any(addon-options,plugin-options) button::after {
+	  display: none !important;
+	}
+	
+	addon-page-options panel-list {
+	  min-width: unset !important;
+	  width: auto !important;
+	  max-width: 300px !important;
+	  z-index: 1000 !important;
+	}
+	
+	addon-page-options panel-list panel-item {
+	  min-width: 280px !important;
+	  width: 280px !important;
+	}
+	
+	.sticky-container {
+	  z-index: 1000 !important;
+	}
+	
+	link:-moz-any([href$="panel-item.css"],[href$="panel-list.css"]) ~ button label[accesskey] {
+	  padding-inline-start: 20px !important;
+	  padding-top: 3px !important;
+	  padding-bottom: 3px !important;
+	  min-width: 290px !important;
+	  width: 290px !important;
+	}
+
+	addon-page-options panel-list panel-item[accesskey][checked] {
+	  background: url("chrome://global/skin/icons/check.svg") 5px no-repeat !important;
+	}
+
+}
