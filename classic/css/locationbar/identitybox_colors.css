@@ -111,7 +111,7 @@
 			  0 1px 3px 1px hsla(0,85%,15%,.5) inset !important;
 }
 
-#urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)), 
+#urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)),
 #urlbar[pageproxystate="valid"] :-moz-any(.chromeUI,.extensionPage),
 #urlbar[pageproxystate="invalid"] .chromeUI {
   background: linear-gradient(#fcfcfc,#d4d4d4) !important;
@@ -120,13 +120,13 @@
   border-image: unset !important;
   border-image-slice: unset !important;
 }
-	
-#urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)) #identity-icon, 
+
+#urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)) #identity-icon,
 #urlbar[pageproxystate="valid"] :-moz-any(.chromeUI,.extensionPage) #identity-icon,
 #urlbar[pageproxystate="invalid"] .chromeUI #identity-icon {
   background-color: unset !important;
 }
-	
+
 #urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)):hover,
 #urlbar[pageproxystate="valid"] :-moz-any(.chromeUI,.extensionPage):hover,
 #urlbar[pageproxystate="invalid"] :.chromeUI:hover {
@@ -192,7 +192,7 @@
 			  0 1px 3px 1px hsla(0,85%,15%,.5) inset !important;
 }
 
-#main-window:not([style*='--lwt-header-image']):-moz-lwtheme-brighttext #urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)), 
+#main-window:not([style*='--lwt-header-image']):-moz-lwtheme-brighttext #urlbar:-moz-any([pageproxystate="invalid"],[pageproxystate="valid"]) :-moz-any(.unknownIdentity,.onionUnknownIdentity):not(:-moz-any(.mixedDisplayContentLoadedActiveBlocked,.notSecureText,.certErrorPage)),
 #main-window:not([style*='--lwt-header-image']):-moz-lwtheme-brighttext #urlbar[pageproxystate="valid"] :-moz-any(.chromeUI,.extensionPage),
 #main-window:not([style*='--lwt-header-image']):-moz-lwtheme-brighttext #urlbar[pageproxystate="invalid"] .chromeUI {
   background: linear-gradient(#474749,#414141,#333333) !important;
