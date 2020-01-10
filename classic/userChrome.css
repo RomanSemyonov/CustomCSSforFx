@@ -5,75 +5,15 @@
 
 /************************************************************************************************/
 /* Custom CSS for Firefox 60+ *******************************************************************/
-/* version 2.9.6 ********************************************************************************/
+/* version 2.9.8 ********************************************************************************/
 /************************************************************************************************/
 
 /*************************************************************************************************
 
-[!] FIREFOX 63-64 (look for '_fx63'):
-  - 'classic/old autocomplete popup with two-lined results' requires a different option
-
-[!] FIREFOX 64+ (look for '_fx64')
-  - 'classic/old autocomplete popup with two-lined results' uses an own new option
-  - 'classic/old autocomplete popup with url only results' uses an own new option
+ Full changelog of every version: https://github.com/Aris-t2/CustomCSSforFx/commits/
   
-[!] Firefox 65+ (look for '_fx65')
-  - 'tabs not on top' mode uses an own new option
-  - 'tabs not on top' mode uses another new option, if combined with 'multiple tab lines' option
-  - 'higher navigation toolbar position' options  uses an own new option
-  - 'tabs below content' mode uses an own new option
-  - 'additional bookmarks toolbar' uses an own new option
-  - 'simulated add-on bar > additional bookmarks toolbar' uses an own new option
-  - 'appbutton in titlebar' on macOS gets moved to the right (see extra option)
-  
-[!] Firefox 66+ (look for '_fx66')
-  - 'multiple tab lines v1 & v2' are not compatible with Firefox 66+
-  - 'bookmarks toolbar multiple lines' uses an own new option
-  - 'searchbar show labels' uses an own new option
-  
-[!] Firefox 68+ (look for '_fx68')
-  - 'autocomplete popup > url and title 50% width each' code changed
-  - 'autocomplete popup > title and url 50% width each' code changed
-  - 'autocomplete popup > title item hidden' code changed
-  - 'autocomplete popup > title item hidden > visible on hover only' code changed
-  - 'classic/old autocomplete popup with two-lined results' uses a new option
-  - 'classic/old autocomplete popup with url only results' uses a new option
-  - "hide 'Search with...' and 'Visit...' results" code changed
-  - 'autocomplete popup > Firefox logo in background' code changed
-  - 'autocomplete popup > Aero highlighting' code changed
-  - 'autocomplete popup > custom height' code changed
-  - 'autocomplete popup > separators between results' code changed
-  - 'autocomplete popup > keyword bold/underline' not supported anymore
-  - 'tabs not on top' > code changed
-  - 'tabs below main content' > code changed
-
-[!] Firefox 69+
-  - 'about:config > toolkit.legacyUserProfileCustomizations.stylesheets > true' (or custom styles will not be loaded)
-
-[!] Firefox 70+ (look for '_fx70')
- - 'about:config > security.identityblock.show_extended_validation > true' (to distinguish between verifiedIdentity and verfiedDomain)
- - 'identitybox > replace i-icon with globe' option replaces 'search glass' icon
- - 'identitybox colors' option cheats tracking protection button into identity box
- - 'searchbar popup > show engine labels' uses an own new option
- - 'searchbar popup > show engine labels + show scrollbar' uses an own new option
- - 'classic appearance for bookmarks menu button' is not working anymore (use button_popup_panel_mozdialog.css + button_popup_panel_compact.css)
- 
- [!] Firefox 71+ (look for '_fx71')
- - added support for 'about:config > layout.css.xul-box-display-values.survive-blockification.enabled > false'
- - 'appbutton in titlebar' requires workaround depending on configuration
- - 'multiple tab lines' got own new settings
-
- [!] Firefox 72+ (look for '_fx72')
- - 'searchbar popup > show engine labels' uses an own new option
- - 'searchbar popup > show engine labels + show scrollbar' uses an own new option
- 
- 
- ------------------------------------------------------------------------------------------------------------------
- [!] For 'Location Bar' settings to work in Firefox 71+ set 'about:config > browser.urlbar.megabar' to 'false'. [!]
- ------------------------------------------------------------------------------------------------------------------
- [!] It is not possible to modify individual menupopups anymore, because their code got moved into general html [!]
- [!] '#shadow-root' sub areas not customizable by CSS without modifying all other menu popups too.              [!]
- ------------------------------------------------------------------------------------------------------------------
+ [!] Firefox 69+ requires this preference to be enabled or custom styles will not be loaded:
+	 'about:config > toolkit.legacyUserProfileCustomizations.stylesheets > true'
 
 *************************************************************************************************/
 
@@ -89,8 +29,8 @@
   \chrome\userChrome.css
   \chrome\userContent.css
 
-  ENABLING options: remove the combination of / and * before '@import'
-  DISABLING options: add the combination of / and * before '@import'
+  ENABLING options: remove the combination of / and * in front of '@import'
+  DISABLING options: add the combination of / and * in front of '@import'
 
   FIREFOX BUGS (nothing CSS code can do about):
   - some '@import' calls might not work properly on macOS and Linux
@@ -640,7 +580,6 @@
 /* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom.css"; /**/  /* <--- EXPERIMENTAL */
 /* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom_fx72.css"; /**/  /* <--- EXPERIMENTAL */
 /* @import "./css/toolbars/addonbar_status_in_addonbar.css"; /**/  /* <--- EXPERIMENTAL */
-/* @import "./css/toolbars/addonbar_content_on_the_right.css"; /**/  /* <--- EXPERIMENTAL */
 /* @import "./css/toolbars/addonbar_fullscreen_autohide.css"; /**/  /* <--- EXPERIMENTAL */
 /* [!] Fx 65+ create additional toolbar for 'bookmarks toolbar items' on navigation toolbar *****/
 /* @import "./css/toolbars/addonbar_extra_bookmarks_toolbar_below_navbar_fx65.css"; /**/  /* <--- EXPERIMENTAL */
@@ -681,7 +620,8 @@
 /* [!] not compatible to 'simulated add-bar' option *********************************************/
 /* [!] SUPPORT THREAD: https://github.com/aris-t2/customcssforfx/issues/99 **********************/
 /* @import "./css/toolbars/bookmarks_toolbar_multiple_lines.css"; /**/ /* <--- EXPERIMENTAL */
-/* @import "./css/toolbars/bookmarks_toolbar_multiple_lines_fx66.css"; /**/ /* <--- EXPERIMENTAL */
+/* @import "./css/toolbars/bookmarks_toolbar_multiple_lines_fx66.css"; /**/ /* <--- EXPERIMENTAL */ /*Fx66-73*/
+/* @import "./css/toolbars/bookmarks_toolbar_multiple_lines_fx74.css"; /**/ /* <--- EXPERIMENTAL */ /*Fx74+*/
 
 /* TOOLBAR COLORS *******************************************************************************/
 @import "./css/toolbars/general_toolbar_colors.css"; /**/
@@ -764,7 +704,8 @@
 /* [!] - Firefox 60-63: option throws unfixable warnings in 'error console' *********************/
 /* [!] - Firefox 64+: popup width can not be detected automatically anymore *********************/
 /* [!] - Firefox 64+: popup width has to be set manually inside /config/ files ******************/
-/* [!] - Firefox 73+: set 'about:config > browser.urlbar.update1 > false' for old appearance ****/
+/* [!] - Firefox 72+: set 'about:config > browser.urlbar.update1 > false' for old appearance ****/
+/* [!] - Firefox 72+: set 'about:config > browser.urlbar.update1 > true' for megabar settings ***/
 /*  - for Firefox 60-62 *************************************************************************/
 /* @import "./css/locationbar/ac_popup_classic_with_two_lines.css"; /**/  /* <--- old autocomplete popup*/
 /* @import "./css/locationbar/ac_popup_classic_with_url_only.css"; /**/  /* <--- old autocomplete popup + url only */
@@ -782,6 +723,8 @@
 /* @import "./css/locationbar/ac_popup_classic_with_url_only_fx68.css"; /**/  /* <--- old autocomplete popup + url only */
 /* @import "./css/locationbar/ac_popup_classic_with_url_only_fx68_star_at_the_end.css"; /**/   /* <--- old autocomplete popup + url only + star icon at the end */
 /* @import "./css/locationbar/ac_popup_default_with_two_lines_fx68.css"; /**/ /* default popup + two lined results*/
+/*  - for Firefox 72+ ('about:config > browser.urlbar.update1 > false') *************************/
+/* @import "./css/locationbar/ac_popup_default_with_two_lines_fx72.css"; /**/ /* default popup + two lined results*/
 
 /* result menuitem settings/appearance **********************************************************/
 /* @import "./css/locationbar/ac_popup_firefox_background_logo.css"; /**/
@@ -801,7 +744,8 @@
 
 
 /************************************************************************************************/
-/* MEGABAR - appearance of 'megabar' / 'megabar popup' (Firefox 73+)  [EXPERIMETNAL] ************/
+/* MEGABAR - appearance of 'megabar' / 'megabar popup' (Firefox 72+)  [EXPERIMETNAL] ************/
+/* about:config > browser.urlbar.update1 > true *************************************************/
 /************************************************************************************************/
 
 @import "./css/locationbar/megabar_optimizations.css"; /**/
