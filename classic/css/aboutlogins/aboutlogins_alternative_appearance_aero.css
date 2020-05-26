@@ -3,8 +3,15 @@
 /****************************************************************************************/
 
 
-#nav-bar:-moz-lwtheme #urlbar ::-moz-selection,
-#nav-bar:not(:-moz-lwtheme) #urlbar ::-moz-selection {
-  background-color: Highlight !important;
-  color: HighlightText !important;
+@import "./aboutlogins_alternative_appearance.css";
+
+
+@-moz-document url-prefix(about:logins) {
+	header,
+	.container ol[role="listbox"],
+	login-list,
+	div.meta {
+	  background: #dbeaf9 !important;
+	}
+	
 }

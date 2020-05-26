@@ -5,7 +5,7 @@
 
 /************************************************************************************************/
 /* Custom CSS for Firefox 60+ (pre-configured for Firefox 75+)***********************************/
-/* version 3.1.3 ********************************************************************************/
+/* version 3.1.4 ********************************************************************************/
 /************************************************************************************************/
 
 /*************************************************************************************************
@@ -357,6 +357,7 @@
 /* - Fx 72-73 Windows/Linux (use the Fx 65+ versions for macOS) *********************************/
 /* @import "./css/tabs/tabs_below_navigation_toolbar_fx72.css"; /**/
 /* - Fx 74+ Windows/Linux ***********************************************************************/
+/* [!] might require overriding url bars 'selection color' --> see corresponding area ***********/ 
 /* @import "./css/tabs/tabs_below_navigation_toolbar_fx74.css"; /**/
 /* - Fx 74+ - macOS *****************************************************************************/
 /* @import "./css/tabs/tabs_below_navigation_toolbar_fx74_macOS.css"; /**/
@@ -728,6 +729,7 @@
 /* @import "./css/locationbar/ac_popup_megabar_searchwith_and_visit_items_hidden.css"; /**/
 /* @import "./css/locationbar/ac_popup_megabar_search_engines_hidden.css"; /**/
 /* @import "./css/locationbar/ac_popup_megabar_result_highlighting_aero.css"; /**/
+/* @import "./css/locationbar/ac_popup_megabar_result_separator.css"; /**/
 
 
 /* [!] Location bar settings below will stop working in Firefox 77+. Use megabar settings! [!] **/
