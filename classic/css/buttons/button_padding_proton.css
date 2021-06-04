@@ -3,15 +3,8 @@
 /****************************************************************************************/
 
 
-.tab-label {
-  -moz-box-flex: 1 !important;
-  text-align: right !important;
-}
-
-/* Proton compatibility */
 @media (-moz-proton) {
-* .tab-label-container.proton {
-  display: flex !important;
-  justify-content: right !important;
-}
+	:root {
+	  --toolbarbutton-inner-padding: 6px !important;
+	}
 }

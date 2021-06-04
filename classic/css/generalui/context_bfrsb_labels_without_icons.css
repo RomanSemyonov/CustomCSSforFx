@@ -6,4 +6,5 @@
 
 :-moz-any(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image {
   opacity: 0 !important;
+  /*display: none !important;*/
 }

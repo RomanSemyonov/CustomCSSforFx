@@ -3,15 +3,15 @@
 /****************************************************************************************/
 
 
-.tab-label {
-  -moz-box-flex: 1 !important;
-  text-align: right !important;
+@import "./tabs_below_navigation_toolbar_fx74.css";
+
+#navigator-toolbox {
+  position: relative;
 }
 
-/* Proton compatibility */
 @media (-moz-proton) {
-* .tab-label-container.proton {
-  display: flex !important;
-  justify-content: right !important;
-}
+	
+  .tabbrowser-tab {
+	min-height: unset !important; 
+  }
 }
