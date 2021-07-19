@@ -2,7 +2,6 @@
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
-
-.tab-line{
+.tab-context-line {
   display: none !important;
 }

@@ -235,6 +235,8 @@
   box-shadow: unset !important;
 }
 
+@media not (-moz-proton) {
+
 /* tab close icon size and position */
 .tabbrowser-tab:not([pinned]) .close-icon > .toolbarbutton-icon {
   width: 16px !important;
@@ -242,7 +244,7 @@
 }
 
 .tabbrowser-tab:not([pinned]) .tab-content  .close-icon,
-:root[uidensity=touch]  .tabbrowser-tab:not([pinned]) .tab-content .close-icon {
+:root[uidensity=touch] .tabbrowser-tab:not([pinned]) .tab-content .close-icon {
   width: 16px !important;
   height: 16px !important;
   -moz-margin-end: -6px !important;
@@ -257,6 +259,8 @@
 :root[uidensity=touch] .tabbrowser-tab:not([pinned]) .tab-close-button {
   margin-inline-end: unset !important;
   padding: unset !important;
+}
+
 }
 
 /*tab favicon position*/
@@ -423,22 +427,23 @@
   padding: unset !important;
 }
 
+
 .tab-background,
 .tab-stack {
   min-height: unset !important;
 }
 
-.tab-close-button {
-  margin-inline-end: unset !important;
-  width: unset !important;
-  height: unset !important;
-  padding: unset !important;
-  border-radius: unset !important;
+#tabbrowser-tabs[overflow="true"] .tabbrowser-tab[pinned] :is(.tab-background,.tab-stack) {
+  min-height: var(--tab-min-height) !important;
 }
 
-.tabbrowser-tab:not(:hover) > .tab-stack > .tab-content > .tab-close-button {
-  padding-inline-start: unset !important;
-  width: unset !important;
+.tab-close-button {
+  margin-inline-end: -6px !important;
+  margin-inline-start: 2px !important;
+  width: 14px !important;
+  height: 14px !important;
+  padding: 2px !important;
+  border-radius: unset !important;
 }
 
 .tabbrowser-tab[visuallyselected=true]:hover,

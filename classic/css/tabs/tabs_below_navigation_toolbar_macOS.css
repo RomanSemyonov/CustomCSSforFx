@@ -3,11 +3,121 @@
 /****************************************************************************************/
 
 
-@import "./tabs_below_navigation_toolbar.css";
-
-#main-window[tabsintitlebar][sizemode="normal"] #toolbar-menubar {
-  margin-top: 24px !important;
+:root {
+  --tabs_toolbar_color_tabs_not_on_top: linear-gradient(#f9f9fa,#f9f9fa);
+  --tab-min-height_tnot: 32px;
 }
-#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar {
-  margin-top: 24px !important;
+
+#TabsToolbar {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100vw;
+  background-clip: padding-box;
+  color: var(--toolbar-color);
+}
+
+#TabsToolbar:not(:-moz-lwtheme){
+  -moz-appearance: none;
+  background-image: var(--tabs_toolbar_color_tabs_not_on_top);
+}
+
+#tabbrowser-tabs {
+  width: 100vw;
+}
+
+#navigator-toolbox {
+  position: relative;
+  padding-bottom: calc( var(--tab-min-height_tnot) + 1px );
+}
+
+
+#main-window[tabsintitlebar]:not([sizemode="fullscreen"]):not([inDOMFullscreen="true"]) #navigator-toolbox {
+  padding-top: calc(-1px + var(--tab-min-height_tnot));
+}
+
+#main-window[tabsintitlebar]:not([sizemode="fullscreen"]):not([inDOMFullscreen="true"]) .titlebar-buttonbox-container {
+  position: fixed;
+  top: 3px !important;
+  right: unset;
+  left: 0;
+  visibility: visible;
+  display: block;
+}
+
+#titlebar:-moz-lwtheme {
+  background-image: var(--lwt-header-image, var(--lwt-additional-images));
+  background-repeat: var(--lwt-background-tiling);
+  background-position: var(--lwt-background-alignment);
+}
+
+/* caption button position in maximized mode after moving to the top */
+#main-window[tabsintitlebar]:not([inDOMFullscreen="true"]) #toolbar-menubar[autohide="true"] ~ #TabsToolbar .titlebar-buttonbox-container,
+#main-window[tabsintitlebar][sizemode="maximized"]:not([inDOMFullscreen="true"]) #TabsToolbar .titlebar-buttonbox-container {
+  top: 0;
+}
+#main-window[tabsintitlebar][sizemode="maximized"]:not([inDOMFullscreen="true"]) #titlebar {
+  height: 36px;
+}
+
+
+@media not (-moz-proton) {
+	#navigator-toolbox {
+	  padding-bottom: calc( var(--tab-min-height_tnot) + 0px );
+	}
+	#TabsToolbar:not(:-moz-lwtheme){
+	  -moz-appearance: none;
+	  background-image: var(--tabs_toolbar_color_tabs_not_on_top);
+	}
+}
+
+#main-window[tabsintitlebar][sizemode="maximized"]:not([inDOMFullscreen="true"]) #titlebar {
+  height: 0px;
+}
+
+#TabsToolbar .titlebar-buttonbox-container,
+#TabsToolbar .private-browsing-indicator,
+#TabsToolbar #window-controls,
+#TabsToolbar *[type="caption-buttons"],
+#TabsToolbar *[type="pre-tabs"],
+#TabsToolbar *[type="post-tabs"] {
+  display: none;
+}
+
+/* lw themes support */
+#nav-bar {
+  box-shadow: unset !important;
+}
+
+/* remove color overlay for lw-themes */
+#main-window[style*='--lwt-header-image'] :-moz-any(#nav-bar,#PersonalToolbar,#TabsToolbar):-moz-lwtheme{
+  background: unset !important;
+}
+
+/* adjust background color */
+#main-window:not([style*='--lwt-header-image']) #TabsToolbar:-moz-lwtheme {
+  -moz-appearance: none !important;
+  background-image: linear-gradient(var(--toolbar-bgcolor),var(--toolbar-bgcolor)) !important;
+}
+
+/* Fixes for projects other settings */
+/* remove application/hamburger button in titlebar and tab toolbars start padding */
+#main-window[tabsintitlebar][sizemode="fullscreen"] #navigator-toolbox #PanelUI-button {
+  visibility: collapse;
+}
+
+/* override code inside appbutton in titlebar code */
+#main-window[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"] ~ #TabsToolbar,
+#main-window[tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"] ~ #TabsToolbar,
+#main-window[tabsintitlebar][sizemode="fullscreen"] #TabsToolbar,
+#main-window[uidensity=compact][tabsintitlebar] #toolbar-menubar[autohide="true"][inactive="true"] ~ #TabsToolbar,
+#main-window[uidensity=compact][tabsintitlebar][sizemode="maximized"] #toolbar-menubar[autohide="true"][inactive="true"] ~ #TabsToolbar,
+#main-window[tabsintitlebar]:is([sizemode="normal"],[sizemode="maximized"],[sizemode="fullscreen"]) #navigator-toolbox #TabsToolbar {
+ -moz-padding-start: 0px !important;
+ -moz-margin-start: 0px !important;
+}
+
+
+#main-window[tabsintitlebar] #TabsToolbar {
+  -moz-padding-end: 0px !important
 }
