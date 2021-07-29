@@ -9,7 +9,7 @@
 
 /* more compact navigation toolbar */
 #main-window[uidensity=compact] {
-  --toolbarbutton-inner-padding: 6px !important;
+  --toolbarbutton-inner-padding: 5px !important;
 }
 
 #main-window[uidensity=compact] #nav-bar #nav-bar-overflow-button,
