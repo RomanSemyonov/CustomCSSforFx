@@ -6,26 +6,14 @@
 @-moz-document url-prefix(about:addons),
 	url-prefix(chrome://mozapps/content/extensions/aboutaddons.html),
 	url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
-	
-	
-  .addon-badge {
-	width: 16px !important;
-	height: 16px !important;
-	background-size: 16px !important;
-	border-radius: 8px !important;
-  }
-  
-  .addon-badge-recommended {
-	background-size: 10px !important;
-	background-radius: 8px !important;
-  }
-  
-  .addon-badge-line {
-	border: none !important;
-  }
-  
-  .addon-badge-verified {
-	background-size: 10px !important;
-  }
+
+
+	/*restore version number */
+	div:not([current-view="updates"]) .addon-name-link[title]:not([data-l10n-args])::after,
+	div:not([current-view="updates"]) .addon-name[title]:not([data-l10n-args])::after {
+	  display: block !important;
+	  content: attr(title) !important;
+	  margin-top: -22px !important;
+	}
 
 }
