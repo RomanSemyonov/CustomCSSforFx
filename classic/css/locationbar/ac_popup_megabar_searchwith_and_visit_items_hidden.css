@@ -13,3 +13,8 @@
   padding: 0px !important;
   margin: 0px !important;
 }
+
+/* hide other unneeded stuff */
+.urlbarView-row[dynamicType="onboardTabToSearch"] {
+  display: none !important;
+}

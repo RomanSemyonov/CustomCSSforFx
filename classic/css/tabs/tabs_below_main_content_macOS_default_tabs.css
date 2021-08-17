@@ -3,10 +3,5 @@
 /****************************************************************************************/
 
 
-.tabbrowser-tab .tab-icon-image[src="chrome://mozapps/skin/extensions/extension.svg"] {
-  fill: green !important;
-}
-
-.tabbrowser-tab .tab-icon-image[src="chrome://global/skin/icons/settings.svg"] {
-  fill: grey !important;
-}
+@import "./tabs_below_navigation_toolbar_macOS_default_tabs.css";
+@import "./tabs_below_main_content_default_tabs.css";

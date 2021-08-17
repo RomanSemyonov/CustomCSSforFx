@@ -15,6 +15,7 @@
   width: 100vw;
   background-clip: padding-box;
   color: var(--toolbar-color);
+  z-index: 2;
 }
 
 #TabsToolbar:not(:-moz-lwtheme){
@@ -83,4 +84,9 @@
 #main-window[tabsintitlebar]:is([sizemode="normal"],[sizemode="maximized"],[sizemode="fullscreen"]) #navigator-toolbox #TabsToolbar {
   padding-inline-start: 0px !important;
   margin-inline-start: 0px !important;
+}
+
+/* remove restored border between navigation toolbar and tabs toolbar */
+#nav-bar:not(:-moz-lwtheme) {
+  box-shadow: unset !important;
 }
