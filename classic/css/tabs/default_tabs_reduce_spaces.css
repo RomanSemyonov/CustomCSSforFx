@@ -3,5 +3,10 @@
 /****************************************************************************************/
 
 
-@import "./tabs_below_navigation_toolbar_macOS_default_tabs.css";
-@import "./tabs_below_main_content_default_tabs.css";
+.tabbrowser-tab {
+  padding-inline: 1px !important;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0px !important;
+}
