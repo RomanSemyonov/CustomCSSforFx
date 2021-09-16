@@ -7,9 +7,10 @@
 	url-prefix(chrome://mozapps/content/extensions/aboutaddons.html),
 	url-prefix(chrome://mozapps/content/extensions/aboutaddons.xhtml) {
 
-	#categories .category[name="discover"],
-	recommended-extensions-section {
-	  display: none !important;
+	#categories .category[name="available-updates"],
+	#category-availableUpdates {
+	  -moz-box-ordinal-group: 100 !important;
+	  order: 2 !important;
 	}
 
 }
