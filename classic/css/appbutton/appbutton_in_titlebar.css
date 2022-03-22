@@ -107,14 +107,18 @@
 	}
 }
 
-/* code for Linux/macOS */
-@media not all and (-moz-os-version: windows-win7) {
-@media not all and (-moz-os-version: windows-win8) {
-@media not all and (-moz-os-version: windows-win10) {
+/* code for Unix (macOS/Linux) */
+@media (not (-moz-os-version: windows-win10)) and (not (-moz-os-version: windows-win8)) and (not (-moz-os-version: windows-win7)) {
 	#main-window[tabsintitlebar][sizemode="maximized"] #PanelUI-button {
 	  top: 0px !important;
 	}  
-}}}
+}
+
+@media not (-moz-platform: windows) {
+	#main-window[tabsintitlebar][sizemode="maximized"] #PanelUI-button {
+	  top: 0px !important;
+	}  
+}
 
 #main-window[tabsintitlebar][sizemode="fullscreen"] #PanelUI-button {
   top: 0px !important;
@@ -135,14 +139,18 @@
   border-bottom: 1px solid !important;
 }
 
-/* code for Linux/macOS */
-@media not all and (-moz-os-version: windows-win10) {
-@media not all and (-moz-os-version: windows-win8) {
-@media not all and (-moz-os-version: windows-win7) {
+/* code for Unix (macOS/Linux) */
+@media (not (-moz-os-version: windows-win10)) and (not (-moz-os-version: windows-win8)) and (not (-moz-os-version: windows-win7)) {
   #main-window[tabsintitlebar] #PanelUI-button #PanelUI-menu-button {
 	max-width: 90px !important;
   }	  
-}}}
+}
+
+@media not (-moz-platform: windows) {
+  #main-window[tabsintitlebar] #PanelUI-button #PanelUI-menu-button {
+	max-width: 90px !important;
+  }	  
+}
 
 /* hide button in fullscreen mode, if toolbars get automatically hidden */
 #main-window[tabsintitlebar][sizemode="fullscreen"] #navigator-toolbox[style*="margin-top: -"] #PanelUI-button {
@@ -162,14 +170,18 @@
   box-shadow: unset !important;
 }
 
-/* code for Linux/macOS */
-@media not all and (-moz-os-version: windows-win10) {
-@media not all and (-moz-os-version: windows-win8) {
-@media not all and (-moz-os-version: windows-win7) {
+/* code for Unix (macOS/Linux) */
+@media (not (-moz-os-version: windows-win10)) and (not (-moz-os-version: windows-win8)) and (not (-moz-os-version: windows-win7)) {
   #main-window[tabsintitlebar] #PanelUI-button .toolbarbutton-icon  {
 	list-style-image: none !important;
   }	  
-}}}
+}
+
+@media not (-moz-platform: windows) {
+  #main-window[tabsintitlebar] #PanelUI-button .toolbarbutton-icon  {
+	list-style-image: none !important;
+  }	  
+}
 
 #main-window[uidensity=touch][tabsintitlebar] #PanelUI-button #PanelUI-menu-button .toolbarbutton-icon {
   margin-inline-end: -90px !important;

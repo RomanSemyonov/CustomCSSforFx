@@ -29,17 +29,19 @@
 }
 
 /* Windows code */
-@media (-moz-os-version:windows-win10), (-moz-os-version:windows-win8), (-moz-os-version:windows-win7) {
+@media (-moz-platform: windows-win10), (-moz-platform: windows-win8), (-moz-platform: windows-win7), (-moz-os-version:windows-win10), (-moz-os-version:windows-win8), (-moz-os-version:windows-win7) {
 
+  #context-navigation :is(menu, menuitem, menucaption),
   :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) {
 	appearance: none !important;
 	min-height: unset !important;
   }
   
+  #context-navigation :is(menu, menuitem, menucaption):hover,
   :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):hover {
 	background-color: var(--menuitem-hover-background-color) !important;
   }
-
+  
   #context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]) > .menu-iconic-left > .menu-iconic-icon,
   #context-navigation > .menuitem-iconic[_moz-menuactive="true"][disabled="true"] > .menu-iconic-left > .menu-iconic-icon {
 	background-color: unset !important;
@@ -57,10 +59,8 @@
 
 }
 
-/* Linux code */
-@media not all and (-moz-os-version: windows-win10) {
-@media not all and (-moz-os-version: windows-win8) {
-@media not all and (-moz-os-version: windows-win7) {
+/* code for Unix (macOS/Linux) */
+@media (not (-moz-os-version: windows-win10)) and (not (-moz-os-version: windows-win8)) and (not (-moz-os-version: windows-win7)) {
 
   :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image {
 	margin: 0 !important;
@@ -72,10 +72,23 @@
 	margin-inline-start: 6px !important;
   }
 
-}}}
+}
 
+@media not (-moz-platform: windows) {
 
-@media (-moz-os-version:windows-win7),(-moz-os-version: windows-win8)  {
+  :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) image {
+	margin: 0 !important;
+	width: 16px !important;
+	height: 16px !important;
+  }
+
+  :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage):after {
+	margin-inline-start: 6px !important;
+  }
+
+}
+
+@media (-moz-platform: windows-win8), (-moz-platform: windows-win7), (-moz-os-version:windows-win8),(-moz-os-version: windows-win7)  {
 
   :is(#context-back,#context-forward,#context-reload,#context-stop,#context-bookmarkpage) {
 	appearance: menuitem !important;

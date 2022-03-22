@@ -22,11 +22,15 @@
   min-height: unset !important;
 }
 
-/* code for macOS */
-@media not all and (-moz-os-version: windows-win7) {
-@media not all and (-moz-os-version: windows-win8) {
-@media not all and (-moz-os-version: windows-win10) {
+/* code for Unix (macOS/Linux) */
+@media (not (-moz-os-version: windows-win10)) and (not (-moz-os-version: windows-win8)) and (not (-moz-os-version: windows-win7)) {
 	#TabsToolbar .titlebar-placeholder[type="caption-buttons"]:not([ordinal="1000"]) {
 	  margin-inline-start: 24px !important;
 	}
-}}}
+}
+
+@media not (-moz-platform: windows) {
+	#TabsToolbar .titlebar-placeholder[type="caption-buttons"]:not([ordinal="1000"]) {
+	  margin-inline-start: 24px !important;
+	}
+}
