@@ -2,7 +2,7 @@
   Firefox userChrome.css tweaks: main file
   
   Custom CSS for Firefox 102+
-  Current version: 4.2.1
+  Current version: 4.2.3
 
   Based on 'Classic Theme Restorer' & 'Classic Toolbar Buttons' add-ons CSS code
   Github: https://github.com/aris-t2/customcssforfx
@@ -326,6 +326,7 @@
 */
 
 @import "./css/buttons/whatnew_button_always_hidden.css"; /**/
+/* @import "./css/buttons/unified_extensions_button_hidden.css"; /**/
 /* @import "./css/buttons/forward_button_hide_when_disabled.css"; /**/
 @import "./css/buttons/back_and_forward_separated_history_popups.css"; /**/
 @import "./css/buttons/back_and_forward_leftclick_history_popup_hidden.css"; /**/
@@ -530,6 +531,9 @@
 
 /* Default tabs with increased contrast for non-active tabs */
 /* @import "./css/tabs/default_tabs_enhanced.css"; /**/
+
+/* Default tabs with colors set by color variables */
+/* @import "./css/tabs/default_tabs_with_colors.css"; /**/
 
 /* Tab appearance known from Firefox 57 - 88 */
 /* @import "./css/tabs/default_tabs_photon.css"; /**/
@@ -943,13 +947,12 @@
    ------------------
 
    [!] only use one option at a time
+   [!] 'top_toolbar_OS_accent_colors.css' failed to work as expected and was removed
 */
 
-/* restore window accent color managed by the OS */
-/* @import "./css/toolbars/top_toolbar_OS_accent_colors.css"; /**/
 
-/* override titlebars and tab toolbars colors forced by Proton UI */
-/* @import "./css/toolbars/top_toolbar_colors.css"; /**/
+/* override titlebars and tab toolbars colors */
+/* @import "./css/toolbars/top_toolbar_colors.css"; /**/ 
 
 
 /* ----------------------
