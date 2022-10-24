@@ -600,8 +600,3 @@
 #private-browsing-indicator-with-label {
   display: none !important;
 }
-
-/* center tab label vertically */
-.tab-label-container {
-  padding-bottom: 2px !important
-}
