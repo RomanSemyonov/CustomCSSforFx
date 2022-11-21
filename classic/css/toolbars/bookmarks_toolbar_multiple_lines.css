@@ -3,8 +3,11 @@
 /****************************************************************************************/
 
 
-/* NOTE  ********************************************************************************/
-/* Variables are set inside '.\config\' folders CSS files, if complete package is used! */
+/* NOTE
+   The below variables are overridden by the ones used inside 
+   ./config/general_variables.css file, if this projects full package is used.
+   Set custom values inside ./config/general_variables.css in that case.
+*/
 
 /* import old button/bookmark size code *************************************************/
 @import "./../buttons/buttons_on_bookmarks_toolbar_old_size_and_appearance.css";
@@ -71,22 +74,6 @@
   margin-bottom: 2px !important;
   vertical-align: middle;
 }
-/*
-#personal-bookmarks #PlacesToolbar toolbarbutton.bookmark-item:hover:active:not([disabled="true"]),
-#personal-bookmarks #PlacesToolbar toolbarbutton.bookmark-item[open="true"] {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-}
-*//*
-#personal-bookmarks #PlacesToolbar toolbarseparator{
-  appearance: none !important;
-  visibility: visible !important;
-  display: inline;
-  text-shadow: none !important;
-  border-left: 3px solid ThreeDShadow !important;
-  border-right: 3px solid ThreeDHighlight !important;
-  vertical-align: middle;
-}*/
 
 #personal-bookmarks toolbarbutton.bookmark-item[dragover][open]{
   appearance: toolbarbutton;
@@ -94,4 +81,8 @@
 
 #navigator-toolbox #PersonalToolbar { 
   max-height: calc( var(--bookmark_items_lines) * var(--bookmark_items_height) ) !important;
+}
+
+#personal-bookmarks #PlacesChevron {
+  display: none !important;
 }
