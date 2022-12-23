@@ -28,21 +28,21 @@
   --classic_squared_tabs_new_tab_icon_color: black;
   --classic_squared_tabs_tab_text_color: black;
   --classic_squared_tabs_tab_text_shadow: transparent;
-  
+
   --tab-min-height: var(--classic_squared_tabs_tab_height) !important;
   --mltabs-newtab-height: calc( var(--classic_squared_tabs_tab_height) + 1px ) !important;
   --tab-min-height_tnot: calc( var(--classic_squared_tabs_tab_height) - 1px ) !important; /* for tabs_below_navigation_toolbar_alt.css */
-  
+
   --tab_below_navigation_toolbar_bottom_padding: var(--classic_squared_tabs_tab_height) !important;
-  
+
   --tab_below_main_content_bottom_margin: calc(2px + var(--classic_squared_tabs_tab_height)) !important;
   --tab_below_main_content_toolbar_height: calc(1px + var(--classic_squared_tabs_tab_height)) !important;
   --tab_below_main_content_top_margin: 0 !important;
-  
+
   /* variables for tabs below navigation toolbar option on macOS */
   --tab_below_navigation_toolbar_bottom_padding_macOS: var(--classic_squared_tabs_tab_height) !important;
   --tab_below_navigation_toolbar_toolbox_top_padding_macOS: calc(-2px + var(--classic_squared_tabs_tab_height)) !important;
-  
+
   /* variables for tab_close_at_tabs_start.css */
   --ctb_start_padding: 2px !important;
   --ctb_width: 14px !important;
@@ -167,20 +167,20 @@
 
 #TabsToolbar:is([darktext],:-moz-lwtheme-darktext):-moz-lwtheme .tabbrowser-tab[selected] .tab-content {
   border-top: 1px solid rgba(0,0,0,.5) !important;
-  border-left: 1px solid rgba(0,0,0,.4) !important; 
+  border-left: 1px solid rgba(0,0,0,.4) !important;
   border-right: 1px solid rgba(0,0,0,.4) !important;
 }
 #TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext):-moz-lwtheme .tabbrowser-tab[selected] .tab-content {
   border-top: 1px solid rgba(255,255,255,.6) !important;
-  border-left: 1px solid rgba(255,255,255,.2) !important; 
-  border-right: 1px solid rgba(255,255,255,.2) !important; 
+  border-left: 1px solid rgba(255,255,255,.2) !important;
+  border-right: 1px solid rgba(255,255,255,.2) !important;
 }
 
 #TabsToolbar:is([darktext],:-moz-lwtheme-darktext):-moz-lwtheme :is(.tabs-newtab-button,#tabs-newtab-button),
 #TabsToolbar:is([darktext],:-moz-lwtheme-darktext):-moz-lwtheme .tabbrowser-tab .tab-content {
   border-top: 1px solid rgba(0,0,0,.2) !important;
-  border-left: 1px solid rgba(0,0,0,.2) !important; 
-  border-right: 1px solid rgba(0,0,0,.2) !important; 
+  border-left: 1px solid rgba(0,0,0,.2) !important;
+  border-right: 1px solid rgba(0,0,0,.2) !important;
 }
 #TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext):-moz-lwtheme :is(.tabs-newtab-button,#tabs-newtab-button),
 #TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext):-moz-lwtheme .tabbrowser-tab .tab-content {
@@ -470,7 +470,7 @@
 }
 
 /* Fx65+ fixes */
-#main-window[sizemode="maximized"][tabsintitlebar] #TabsToolbar {
+#main-window[sizemode="maximized"] #TabsToolbar {
   margin-top: -1px !important;
 }
 
@@ -565,7 +565,7 @@
 
 /* Fx 101+ */
 @media (-moz-platform: windows-win10), (-moz-os-version:windows-win10) {
-	
+
 	#main-window[sizemode="maximized"][tabsintitlebar] #titlebar {
 	  margin-top: -5px !important;
 	}
@@ -577,7 +577,7 @@
 	#main-window[sizemode="maximized"][tabsintitlebar] #toolbar-menubar {
 	  padding-top: 5px !important;
 	}
-	
+
 	#main-window[sizemode="maximized"] #toolbar-menubar[inactive] + #TabsToolbar > .titlebar-buttonbox-container toolbarbutton {
 	  padding-top: 10px !important;
 	  padding-bottom: 6px !important;
@@ -599,7 +599,7 @@
   display: none !important;
 }
 
-/* Fx 106+*/					
+/* Fx 106+*/
 #private-browsing-indicator-with-label {
   display: none !important;
 }
