@@ -611,7 +611,7 @@
 
 /* center tab label vertically */
 .tab-label-container {
-  padding-bottom: 2px !important
+  padding-bottom: 0px !important
 }
 
 /* Fx 110 none-sense - remove line below active tab */
