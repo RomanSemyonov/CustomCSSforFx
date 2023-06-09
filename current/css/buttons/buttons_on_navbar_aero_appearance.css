@@ -44,20 +44,3 @@
 			  border-color .2s ease-in,
 			  box-shadow .2s ease-in !important;
 }
-
-#nav-bar .toolbarbutton-1:not([disabled=true], [checked], [open], :active):hover > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true], [checked], [open], :active):hover > .toolbarbutton-text,
-#nav-bar .toolbarbutton-1:not([disabled=true], [checked], [open], :active):hover > .toolbarbutton-badge-stack {
-  background-color: transparent !important;
-}
-
-#nav-bar .toolbarbutton-1:not([disabled=true]):is([open],[checked],:hover:active) > .toolbarbutton-icon,
-#nav-bar .toolbarbutton-1:not([disabled=true]):is([open],[checked],:hover:active) > .toolbarbutton-text,
-#nav-bar .toolbarbutton-1:not([disabled=true]):is([open],[checked],:hover:active) > .toolbarbutton-badge-stack {
-  background-color: transparent !important;
-}
-
-/* deep Fx 109 bs and nonsense override */
-#nav-bar :is(toolbarbutton.subviewbutton,.toolbaritem-combined-buttons:is(:not([cui-areatype="toolbar"]),[overflowedItem=true]) > toolbarbutton):not([disabled]):hover {
-  background-color: unset !important; 
-}
