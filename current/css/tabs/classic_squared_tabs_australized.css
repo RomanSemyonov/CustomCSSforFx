@@ -344,7 +344,7 @@
 }
 
 /* Windows 10 fix */
-@media (-moz-platform: windows-win10), (-moz-os-version: windows-win10) {
+@media (-moz-platform: windows) {
 	#toolbar-menubar .titlebar-button {
 	  padding-top: 6px !important;
 	  padding-bottom: 6px !important;
@@ -473,7 +473,7 @@
   margin-top: 0 !important;
 }
 
-@media (-moz-platform: windows-win10), (-moz-os-version: windows-win10) {
+@media (-moz-platform: windows) {
   #main-window[sizemode="maximized"] .titlebar-buttonbox-container {
 	margin-inline-end: -2px !important;
   }
@@ -553,7 +553,7 @@
 }
 
 /* Fx 101+ */
-@media (-moz-platform: windows-win10), (-moz-os-version:windows-win10) {
+@media (-moz-platform: windows) {
 	
 	#main-window[sizemode="maximized"][tabsintitlebar] #titlebar {
 	  margin-top: -5px !important;

@@ -137,7 +137,6 @@
 /********************************************/
 
 /* lightweight theme tab colors*/
-/* lightweight theme tab colors*/
 #TabsToolbar:is([darktext],:-moz-lwtheme-darktext):-moz-lwtheme .tabbrowser-tab:is([selected],[multiselected]) .tab-content {
   background-image: var(--classic_squared_tabs_lwt-dark_active_tab) !important;
 }
@@ -171,9 +170,9 @@
   border-right: 1px solid rgba(0,0,0,.4) !important;
 }
 #TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext):-moz-lwtheme .tabbrowser-tab:is([selected],[multiselected]) .tab-content {
-  border-top: 1px solid rgba(255,255,255,.6) !important;
-  border-left: 1px solid rgba(255,255,255,.2) !important;
-  border-right: 1px solid rgba(255,255,255,.2) !important;
+  border-top: 1px solid rgba(255,255,255,.2) !important;
+  border-left: 1px solid rgba(255,255,255,.1) !important;
+  border-right: 1px solid rgba(255,255,255,.1) !important;
 }
 
 #TabsToolbar:is([darktext],:-moz-lwtheme-darktext):-moz-lwtheme :is(.tabs-newtab-button,#tabs-newtab-button),
@@ -184,9 +183,9 @@
 }
 #TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext):-moz-lwtheme :is(.tabs-newtab-button,#tabs-newtab-button),
 #TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext):-moz-lwtheme .tabbrowser-tab .tab-content {
-  border-top: 1px solid rgba(255,255,255,.6) !important;
-  border-left: 1px solid rgba(255,255,255,.2) !important;
-  border-right: 1px solid rgba(255,255,255,.2) !important;
+  border-top: 1px solid rgba(255,255,255,.2) !important;
+  border-left: 1px solid rgba(255,255,255,.1) !important;
+  border-right: 1px solid rgba(255,255,255,.1) !important;
 }
 
 @media (-moz-content-prefers-color-scheme: dark) {
@@ -205,15 +204,15 @@
 	  background: unset !important;
 	}
 	.tabbrowser-tab:is([selected],[multiselected]):-moz-lwtheme .tab-content {
-	  border-top: 1px solid rgba(255,255,255,.6) !important;
-	  border-left: 1px solid rgba(255,255,255,.2) !important;
-	  border-right: 1px solid rgba(255,255,255,.2) !important;
+	  border-top: 1px solid rgba(255,255,255,.2) !important;
+	  border-left: 1px solid rgba(255,255,255,.1) !important;
+	  border-right: 1px solid rgba(255,255,255,.1) !important;
 	}
 	#TabsToolbar:-moz-lwtheme :is(.tabs-newtab-button,#tabs-newtab-button):-moz-lwtheme,
 	.tabbrowser-tab .tab-content:-moz-lwtheme {
-	  border-top: 1px solid rgba(255,255,255,.6) !important;
-	  border-left: 1px solid rgba(255,255,255,.2) !important;
-	  border-right: 1px solid rgba(255,255,255,.2) !important;
+	  border-top: 1px solid rgba(255,255,255,.2) !important;
+	  border-left: 1px solid rgba(255,255,255,.1) !important;
+	  border-right: 1px solid rgba(255,255,255,.1) !important;
 	}
 }
 
@@ -241,6 +240,12 @@
 	  border-left: 1px solid rgba(0,0,0,.2) !important;
 	  border-right: 1px solid rgba(0,0,0,.2) !important;
 	}
+}
+
+
+/* experimental tab text opacity change */
+#TabsToolbar:is([brighttext],:-moz-lwtheme-brighttext) .tabbrowser-tab:not([selected],[multiselected]) .tab-text {
+  opacity: 0.8 !important;
 }
 
 /* Fx 100+ outline fix */
