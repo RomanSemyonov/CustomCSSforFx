@@ -343,6 +343,7 @@
 }
 
 /* reduce minimum tab height */
+.tabbrowser-tab,
 #tabbrowser-tabs,
 #tabbrowser-tabs > .tabbrowser-arrowscrollbox,
 .tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
@@ -484,7 +485,7 @@
   margin-top: 0 !important;
 }
 
-@media (-moz-platform: windows-win10), (-moz-os-version: windows-win10) {
+@media (-moz-platform: windows-win10), (-moz-os-version: windows-win10), (-moz-platform: windows) {
   #main-window[sizemode="maximized"] .titlebar-buttonbox-container {
 	margin-inline-end: -2px !important;
   }
@@ -572,8 +573,8 @@
 }
 
 /* Fx 101+ */
-@media (-moz-platform: windows-win10), (-moz-os-version:windows-win10) {
-
+@media (-moz-platform: windows) {
+	
 	#main-window[sizemode="maximized"][tabsintitlebar] #titlebar {
 	  margin-top: -5px !important;
 	}
