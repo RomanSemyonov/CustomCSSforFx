@@ -24,7 +24,7 @@
   --classic_squared_tabs-border1: #5f7181;
   --classic_squared_tabs-border2: rgba(0,0,0,.2);
   --classic_squared_tabs-border3: rgba(0,0,0,.5);
-  --classic_squared_tabs-border-radius: 3px;
+  --classic_squared_tabs-border-radius: 0px;
   --classic_squared_tabs_new_tab_icon_color: black;
   --classic_squared_tabs_tab_text_color: black;
   --classic_squared_tabs_tab_text_shadow: transparent;
@@ -85,12 +85,12 @@
 
 /* unloaded/pending tabs color */
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab[pending] .tab-content {
-  background-image: var(--classic_squared_tabs_unloaded_tabs) !important; !important;
+  background-image: var(--classic_squared_tabs_unloaded_tabs) !important;
 }
 
 /* hovered unloaded/pending tabs color */
 #TabsToolbar:not(:-moz-lwtheme) .tabbrowser-tab:hover[pending] .tab-content {
-  background-image: var(--classic_squared_tabs_hovered_unloaded_tabs) !important; !important;
+  background-image: var(--classic_squared_tabs_hovered_unloaded_tabs) !important;
 }
 
 /* unread tabs color */
