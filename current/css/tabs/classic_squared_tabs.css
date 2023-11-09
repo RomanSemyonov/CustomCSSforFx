@@ -574,7 +574,7 @@
 
 /* Fx 101+ */
 @media (-moz-platform: windows) {
-	
+
 	#main-window[sizemode="maximized"][tabsintitlebar] #titlebar {
 	  margin-top: -5px !important;
 	}
@@ -592,7 +592,7 @@
 	}
 }
 
-/* Fx 105+ - remove Firefox-view-button from tabs toolbar *//*
+/* Fx 105+ - remove Firefox-view-button from tabs toolbar */
 :root:not([privatebrowsingmode=temporary]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs,
 :root[privatebrowsingmode=temporary] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
   border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important;
@@ -611,7 +611,7 @@
   list-style-image: url("chrome://branding/content/about-logo.png") !important;
 }
 
-#main-window[customizing]*/ #TabsToolbar #firefox-view-button image {
+#main-window[customizing] #TabsToolbar #firefox-view-button image {
   width: 16px !important;
   height: 16px !important;
 }
