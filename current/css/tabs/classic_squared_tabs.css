@@ -474,7 +474,7 @@
 }
 
 /* Fx65+ fixes */
-#main-window[sizemode="maximized"][tabsintitlebar] :is(#TabsToolbar,#vertical-tabs) {
+#main-window[sizemode="maximized"] :is(#TabsToolbar,#vertical-tabs) {
   margin-top: -1px !important;
 }
 
@@ -551,10 +551,6 @@
   box-shadow: 0 calc(-1 * var(--classic_squared_tabs-border_size)) 0 var(--classic_squared_tabs-border2) !important;
 }
 
-:root:not([lwtheme]) :is(#TabsToolbar,#vertical-tabs) #tabbrowser-tabs .tabbrowser-tab:not([selected],[multiselected]) .tab-stack .tab-content {
-  box-shadow: inset 0 -1px 0 0 var(--classic_squared_tabs-border2) !important;
-}
-
 /* remove active tabs left and right tab border color when using lw-themes */
 :root[lwtheme]:not([lwtheme-mozlightdark]) :is(#TabsToolbar,#vertical-tabs):not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([selected],[multiselected]) > .tab-stack > .tab-background,
 :root[lwtheme]:not([lwtheme-mozlightdark]) :is(#TabsToolbar,#vertical-tabs)[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([selected],[multiselected]) > .tab-stack > .tab-background {
@@ -593,11 +589,35 @@
 	  padding-bottom: 6px !important;
 	}
 }
-/*
-:is(#TabsToolbar,#vertical-tabs) #firefox-view-button image {
-  width: 16px !important;
-  height: 16px !important;
-}*/
+
+#TabsToolbar #firefox-view-button image {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Fx 105+ - remove Firefox-view-button from tabs toolbar */
+:root:not([privatebrowsingmode=temporary]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs,
+:root[privatebrowsingmode=temporary] :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
+    border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important;
+}
+
+:root:not([privatebrowsingmode=temporary]):not([firefoxviewhidden]) :is(#firefox-view-button, #wrapper-firefox-view-button) + #tabbrowser-tabs:not([overflow]) {
+    padding-inline-start: 0 !important;
+    margin-inline-start: 0 !important;
+}
+
+#main-window:not([customizing]) #TabsToolbar :is(#firefox-view-button, #wrapper-firefox-view-button) {
+    display: none !important;
+}
+
+#main-window[customizing] #TabsToolbar #firefox-view-button {
+    list-style-image: url("chrome://branding/content/about-logo.png") !important;
+}
+
+#main-window[customizing] #TabsToolbar #firefox-view-button image {
+    width: 16px !important;
+    height: 16px !important;
+}
 
 /* Fx 106+ */
 #private-browsing-indicator-with-label {
@@ -641,6 +661,6 @@
 
   &:not([pinned]) {
     margin-inline-start: -5px !important;
-	margin-inline-end: 4px !important; 
+	margin-inline-end: 4px !important;
   }
 }
