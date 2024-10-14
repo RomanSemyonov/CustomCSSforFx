@@ -2,7 +2,7 @@
   Firefox userChrome.css tweaks: main file
   
   Custom CSS for Firefox 115+
-  Current version: 4.5.6
+  Current version: 4.5.8
 
   Based on 'Classic Theme Restorer' & 'Classic Toolbar Buttons' add-ons CSS code
   Github: https://github.com/aris-t2/customcssforfx
@@ -572,6 +572,9 @@
 
 /* @import "./css/tabs/tabs_below_navigation_toolbar.css"; /**/
 
+/* ########################################### Test for Firefox 133+ ########################################### */
+/* @import "./css/tabs/tabs_below_navigation_toolbar_fx133.css"; /**/
+
 
 /* Alternative for multi-lined tabs (Glitches might occur with inactive menubar!)
    [!] use option below for multiple tab lines support
@@ -603,6 +606,9 @@
 
 /* @import "./css/tabs/tabs_below_main_content.css"; /**/
 
+/* ########################################### Test for Firefox 133+ ########################################### */
+/* @import "./css/tabs/tabs_below_main_content_fx133.css"; /**/
+
 
 /* --------------------------------------------------------------------------------
    TAB BACKGROUND COLORS for default/active/hovered/unloaded tabs and 'new tab' tab
@@ -629,7 +635,6 @@
    [!] not compatible with 'tabs toolbar - below main content' option
    [!] not compatible with 'newtab button always_visible' option
    [!] only compatible with 'tabs below navigation toolbar >> alt << version'
-   [!] not compatible to Firefox 131+
 */
 
 /* @import "./css/tabs/tabs_multiple_lines.css"; /**/
@@ -716,7 +721,9 @@
 @import "./css/tabs/tab_maxwidth.css"; /**/
 @import "./css/tabs/tab_titles_remove_blur.css"; /**/
 @import "./css/tabs/alltabs_button_always_visible.css"; /**/  /* hidden, if multiple tab rows are used */
+/* @import "./css/tabs/alltabs_button_only_visible_in_overflow_mode.css"; /**/
 /* @import "./css/tabs/alltabs_button_always_hidden.css"; /**/
+/* @import "./css/tabs/alltabs_button_old_icon.css"; /**/
 /* @import "./css/tabs/pinnedtab_empty_favicon_hidden.css"; /**/
 
 /* [!] edit target file to select which items to hide */
@@ -1108,11 +1115,12 @@
 /* @import "./css/locationbar/identitybox_padlock_icon_modern.css"; /**/
 /* @import "./css/locationbar/identitybox_padlock_icon_modern2.css"; /**/
 /* @import "./css/locationbar/identitybox_padlock_icon_hidden.css"; /**/
+/* @import "./css/locationbar/identitybox_padlock_icon_arrow.css"; /**/
 
 
-/* -----------------------------------------------------------------------
-   Additional icons/buttons and tweaks for third party page action buttons
-   -----------------------------------------------------------------------
+/* -----------------------------------------------------------
+   Additional icons/buttons and tweaks for page action buttons
+   -----------------------------------------------------------
 */
 
 /* @import "./css/locationbar/icons_colorized.css"; /**/
@@ -1122,6 +1130,7 @@
 /* @import "./css/locationbar/zoom_button_hidden.css"; /**/
 /* @import "./css/locationbar/go_button_in_location_bar_hidden.css"; /**/
 /* @import "./css/locationbar/tracking_protection_alternative_icon.css"; /**/
+/* @import "./css/locationbar/urlbar_icons_aero_appearance.css"; /**/
 
 
 /* ----------------------------
