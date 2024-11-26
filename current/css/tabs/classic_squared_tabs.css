@@ -500,8 +500,8 @@
   height: 16px !important;
 }
 
-:is(#TabsToolbar,#vertical-tabs)-customization-target > toolbarpaletteitem toolbarbutton .toolbarbutton-icon,
-:is(#TabsToolbar,#vertical-tabs)-customization-target > toolbarbutton .toolbarbutton-icon {
+#TabsToolbar-customization-target > toolbarpaletteitem toolbarbutton .toolbarbutton-icon,
+#TabsToolbar-customization-target > toolbarbutton .toolbarbutton-icon {
   padding: unset !important;
   height: unset !important;
   width: unset !important;
@@ -699,7 +699,6 @@
 }
 
 /*Fx 127+ */
-
 .tabbrowser-tab:not([pinned]):not([locked]) .tab-throbber,
 .tabbrowser-tab:not([pinned]) .tab-icon-pending,
 .tabbrowser-tab:not([pinned]) .tab-icon-image,
@@ -710,4 +709,15 @@
     margin-inline-start: -5px !important;
 	margin-inline-end: 4px !important;
   }
+}
+
+/*Fx 132+ */
+.tab-content {
+  padding: 0 8px !important;
+}
+
+/* Fx 133+ */
+#tabbrowser-tabs[orient="horizontal"] .tab-background,
+#tabbrowser-tabs[orient="horizontal"] {
+  min-height: unset !important;
 }
