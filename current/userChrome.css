@@ -1,8 +1,8 @@
 /*===============================================================================
   Firefox userChrome.css tweaks: main file
   
-  Custom CSS for Firefox 128+
-  Current version: 4.6.1
+  Custom CSS for Firefox 133+ (128 ESR compatible with corresponding settings)
+  Current version: 4.6.7
 
   Based on 'Classic Theme Restorer' & 'Classic Toolbar Buttons' add-ons CSS code
   Github: https://github.com/aris-t2/customcssforfx
@@ -351,6 +351,7 @@
    ----------------------------------------
 
    [!] only use one option at a time
+   [!] custom_backforward_connected_to_location_bar.css is not working on Fx 133+
 */
 
 /* @import "./css/buttons/custom_backforward_large_ff2.css"; /**/
@@ -374,9 +375,9 @@
 /* @import "./css/buttons/custom_backforward_small_kempelton.css"; /**/
 /* @import "./css/buttons/custom_backforward_small_phoenix.css"; /**/
 /* @import "./css/buttons/custom_backforward_connected.css"; /**/ /* round */
-/* @import "./css/buttons/custom_backforward_connected_to_location_bar.css"; /**/ /* round */
-/* @import "./css/buttons/custom_backforward_connected_alt.css"; /**/ /* squared*/
-/* @import "./css/buttons/custom_backforward_connected_to_location_bar_alt.css"; /**/ /* squared*/
+/* @import "./css/buttons/custom_backforward_connected_to_location_bar.css"; /**/ /* round */ /* not working on Fx 133+ */
+/* @import "./css/buttons/custom_backforward_connected_alt.css"; /**/ /* squared */
+/* @import "./css/buttons/custom_backforward_connected_to_location_bar_alt.css"; /**/ /* squared */
 
 
 /* ==========================================
@@ -546,7 +547,7 @@
 
 /* Tab appearance based on tabs known from Firefox 57 - 88 */
 /* @import "./css/tabs/default_tabs_photon.css"; /**/
-/* @import "./css/tabs/default_tabs_photon_alt.css"; /**/ /* file from v4.2.7 -no support- */
+/* @import "./css/tabs/default_tabs_photon_alt.css"; /**/ /* file from v4.2.7 / no support / will removed in the future */
 
 
 /* ======================================================================================
@@ -571,21 +572,20 @@
    --------------------------------------------------------------
 
    [!] Note: 'alt' works with multi-tab lines option up to Fx 132.
-   [!] Note: '_fx133.css' version works with multi-tab lines option for Fx 133+.
    [!] Note: might require overriding url bars 'selection color' --> see corresponding area
-   [!] _fx133.css for Firefox 133+
+   [!] tabs_below_navigation_toolbar_fx128-132.css for Firefox 128-132
    [!] only use one option at a time
 */
 
-/* @import "./css/tabs/tabs_below_navigation_toolbar.css"; /**/ /* for Firefox 132 and below */
-/* @import "./css/tabs/tabs_below_navigation_toolbar_fx133.css"; /**/ /* for Firefox 133+ */
+/* @import "./css/tabs/tabs_below_navigation_toolbar.css"; /**/ /* for Firefox 133+ */
+/* @import "./css/tabs/tabs_below_navigation_toolbar_fx128-132.css"; /**/ /* for Firefox 128-132 */
 
 
 /* Alternative for multi-lined tabs (Possible glitches with inactive menubar!)
    [!] use option below for multiple tab lines support (up to Fx 132 only !)
 */
 
-/* @import "./css/tabs/tabs_below_navigation_toolbar_alt.css"; /**/
+/* @import "./css/tabs/tabs_below_navigation_toolbar_alt.css"; /**/  /* (up to Fx 132 only !) */
 
 /* [!] no menubar when OS titlebar is active */
 /* @import "./css/tabs/tabs_below_navigation_toolbar_alt_force_hidden_menubar.css"; /**/
@@ -593,17 +593,13 @@
 
 /* Move tabs to a higher position 
    [!] not compatible to 'tabs toolbar - multiple tab lines' option up to Fx132, works with Fx133+
-   [!] _fx133.css for Firefox 133+
+   [!] _fx128-132.css is for Firefox 128-132 only
    [!] only use one option at a time
-   [!] EXPERIMENTAL
 */
 
-/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_positon.css"; /**/
-/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_positon_fx133.css"; /**/
-/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_positon_with_appbutton.css"; /**/
-/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_positon_with_appbutton_fx133.css"; /**/
-/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_positon_with_appbutton_icon_only.css"; /**/
-/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_positon_with_appbutton_icon_only_fx133.css"; /**/
+/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_position.css"; /**/
+/* @import "./css/tabs/tabs_below_navigation_toolbar_higher_navbar_position_fx128-132.css"; /**/
+
 
 
 /* ----------------------------------------
@@ -612,10 +608,11 @@
 
    [!] not compatible to 'tabs toolbar - multiple tab lines' option
    [!] only use one option at a time
+   [!] tabs_below_main_content_fx128-132.css for Firefox 128-132 only
 */
 
-/* @import "./css/tabs/tabs_below_main_content.css"; /**/ /* for Firefox 132 and below */
-/* @import "./css/tabs/tabs_below_main_content_fx133.css"; /**//* for Firefox 133+ */
+/* @import "./css/tabs/tabs_below_main_content.css"; /**/ /* for Firefox 133+ */
+/* @import "./css/tabs/tabs_below_main_content_fx128-132.css"; /**/ /* for Firefox 128-132 */
 
 
 /* --------------------------------------------------------------------------------
@@ -642,8 +639,8 @@
    [!] BUG: dragging tabs does not work with multi lined tabs
    [!] not compatible with 'tabs toolbar - below main content' option
    [!] not compatible with 'newtab button always_visible' option
-   [!] up to Firefox 132: only compatible with 'tabs below navigation toolbar >> alt << version'
-   [!] Fx 133+: compatible with tabs_below_navigation_toolbar_fx133.css
+   [!] Fx 133+: compatible with tabs_below_navigation_toolbar.css
+   [!] Fx 128-132: only compatible with tabs_below_navigation_toolbar_alt.css
 */
 
 /* @import "./css/tabs/tabs_multiple_lines.css"; /**/
@@ -699,6 +696,10 @@
    DEFAULT TABS - settings for default browser tabs
    ------------------------------------------------
 
+
+/* ------------------------
+   DEFAULT TABS - tab line
+   ------------------------
    [!] only use one option at a time
    [!] use only, if 'classic squared tabs' are disabled
 */
@@ -706,6 +707,14 @@
 /* @import "./css/tabs/default_tabs_no_tab_line.css"; /**/
 /* @import "./css/tabs/default_tabs_tab_line_red_for_unloaded_tabs.css"; /**/
 /* @import "./css/tabs/default_tabs_tab_line_purple_in_private_mode.css"; /**/
+
+/* ---------------------------------------
+   DEFAULT TABS - height / space settings
+   ---------------------------------------
+*/
+
+/* @import "./css/tabs/default_tabs_reduce_height.css"; /**/ /* Fx133 introduced new tab dimensions this setting tries to bybass */
+/* @import "./css/tabs/default_tabs_reduce_spaces.css"; /**/
 
 
 /* ------------------
@@ -717,8 +726,6 @@
 /* @import "./css/tabs/tab_title_centered.css"; /**/
 /* @import "./css/tabs/tabs_firefox_view_button_hidden.css"; /**/
 /* @import "./css/tabs/classic_squared_tabs_old_bordercolor_for_lwthemes.css"; /**/ /* has to be used along with 'classic_squared_tabs.css' */
-/* @import "./css/tabs/default_tabs_reduce_height.css"; /**/ /* Fx133 introduced new tab dimensions this setting tries to bybass */
-/* @import "./css/tabs/default_tabs_reduce_spaces.css"; /**/
 /* @import "./css/tabs/tabs_fully_squared.css"; /**/
 /* @import "./css/tabs/tab_audio_icon.css"; /**/
 /* @import "./css/tabs/tab_audio_icon_colorized.css"; /**/
@@ -774,8 +781,7 @@
    -------------------------------------------
 
    [!] not for macOS
-   [!] affects context menus, popup menus and panel menus on Windows 10
-   [!] affects panel menus on Windows 7 and 8 and on Linux
+   [!] affects context menus, popup menus and panel menus
 */
 
 /* @import "./css/generalui/popup_compact_menus.css"; /**/
@@ -932,12 +938,9 @@
    [!] move 'Bookmarks Toolbar Items' to navigation bar to get a top toolbar with bookmarks
    [!] not compatible to 'bookmarks toolbar - multiple lines' option
    [!] not compatible to 'bookmarks toolbar autohide' option
-   [!] "addonbar_move_bookmarks_toolbar_to_bottom.css" is currently broken on Fx 132, but works on Fx 128ESR and 133+
-   [!] use "addonbar_move_bookmarks_toolbar_to_bottom_temp_fix_fx132.css" on Fx 132
 */
 
 /* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom.css"; /**/
-/* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom_temp_fix_fx132.css"; /**/ /* Fx 132 only */
 /* @import "./css/toolbars/addonbar_move_bookmarks_toolbar_to_bottom_tabs_on_bottom_compatibility.css"; /**/
 /* @import "./css/toolbars/addonbar_status_in_addonbar.css"; /**/
 /* @import "./css/toolbars/addonbar_fullscreen_autohide.css"; /**/
@@ -953,15 +956,15 @@
    ------------------
 
    [!] only use one option at a time
-   [!] 'top_toolbar_OS_accent_colors.css' failed to work as expected on current Firefox versions and was removed
-   [!] 'top_toolbar_colors_v2.css' mainly for 'tabs below navigation toolbar option'
-   [!] Windows accent colors: about:config > browser.theme.windows.accent-color-in-tabs.enabled > true
+   [!] Windows accent colors for top_toolbar_system_accent_colors.css: about:config > browser.theme.windows.accent-color-in-tabs.enabled > true
 */
 
 
 /* override titlebars and tab toolbars colors */
-/* @import "./css/toolbars/top_toolbar_colors.css"; /**/
-/* @import "./css/toolbars/top_toolbar_colors_v2.css"; /**/ 
+/* @import "./css/top_toolbar_system_accent_colors.css"; /**/
+/* @import "./css/toolbars/top_toolbar_colors_tabs_on_top.css"; /**/
+/* @import "./css/toolbars/top_toolbar_colors_tabs_not_on_top.css"; /**/
+/* @import "./css/toolbars/top_toolbar_colors_tabs_not_on_top_v2.css"; /**/
 
 
 /* ----------------------
@@ -971,7 +974,6 @@
 
 @import "./css/toolbars/toolbars_old_padding.css"; /**/
 @import "./css/toolbars/tabs_toolbar_adjustments.css"; /**/
-/* @import "./css/toolbars/tabs_toolbar_remove_background_fog_win7.css"; /**/
 
 /* [!] Adjustments for the searchbar placed on menubar */
 @import "./css/toolbars/searchbar_on_menubar_fix.css"; /**/
@@ -1144,7 +1146,7 @@
 /* @import "./css/locationbar/go_button_in_location_bar_hidden.css"; /**/
 /* @import "./css/locationbar/tracking_protection_alternative_icon.css"; /**/
 /* @import "./css/locationbar/urlbar_icons_aero_appearance.css"; /**/
-/* @import "./css/locationbar/urlbar_searchmode_switcher_hidden.css"; /**/ /* Fx 134+ */
+/* @import "./css/locationbar/urlbar_searchmode_switcher_hidden.css"; /**/ /* currently on Nightly */
 
 
 /* ----------------------------
@@ -1199,23 +1201,29 @@
    -------------------------------------
 
    [!] only use one option at a time
-   [!] _fx133.css for Firefox 133+
-
+   [!] megabar_expanding_breakout_disabled_fx128-fx132 is for Firefox 128-132.
+   
 */
 
-/* @import "./css/locationbar/megabar_expanding_breakout_disabled.css"; /**/
-/* @import "./css/locationbar/megabar_expanding_breakout_disabled_fx133.css"; /**/
+@import "./css/locationbar/megabar_expanding_breakout_disabled.css"; /**/
+/* @import "./css/locationbar/megabar_expanding_breakout_disabled_fx128-fx132.css"; /**/
 
 
 /* -------------------------------------
    Megabar/location bar background color
    -------------------------------------
 
+   [!] _old_colors.css restores colors known from Firefox 132 and older
+   [!] _old_colors_lwtheme.css restores colors known from Firefox 132 and older for lwthemes
+   [!] _color.cs forces a white background color
+   [!] _color_dark.cs forces a dark background color
    [!] only use one option at a time
 */
 
-/* @import "./css/locationbar/urlbar_background_color.css"; /**/ /* default white background color */
-/* @import "./css/locationbar/urlbar_background_color_dark.css"; /**/ /* force dark color for e.g. dark lw-themes */
+@import "./css/locationbar/urlbar_background_old_colors.css"; /**/
+/* @import "./css/locationbar/urlbar_background_old_colors_lwtheme.css"; /**/
+/* @import "./css/locationbar/urlbar_background_color.css"; /**/
+/* @import "./css/locationbar/urlbar_background_color_dark.css"; /**/
 
 
 /* ---------------------------------------

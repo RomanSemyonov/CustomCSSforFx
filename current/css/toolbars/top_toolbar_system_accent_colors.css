@@ -2,7 +2,13 @@
 /* Github: https://github.com/aris-t2/customcssforfx ************************************/
 /****************************************************************************************/
 
-#main-window:not([inDOMFullscreen="true"],[sizemode="fullscreen"]) #browser,
-#main-window:not([inDOMFullscreen="true"],[sizemode="fullscreen"]) #customization-container {
-  margin-bottom: 4px !important; 
+/*
+  Required Firefox preference
+  about:config > browser.theme.windows.accent-color-in-tabs.enabled > true
+ 
+*/
+
+#main-window {
+  appearance: auto !important;
+  -moz-default-appearance: -moz-win-borderless-glass !important;
 }
