@@ -9,14 +9,14 @@
 
 /* more compact navigation toolbar */
 :root[uidensity=compact] {
-  --toolbarbutton-inner-padding: 6px !important;
+  --toolbarbutton-inner-padding: 5px !important;
 }
 
 :root[uidensity=compact] #nav-bar #nav-bar-overflow-button,
 :root[uidensity=compact] #nav-bar #nav-bar-customization-target > toolbarbutton,
 :root[uidensity=compact] #nav-bar #nav-bar-customization-target > toolbaritem textbox,
 :root[uidensity=compact] #nav-bar #nav-bar-customization-target #stop-reload-button > toolbarbutton {
-  margin: 1px 0px !important;
+  margin: 0px 0px !important;
   padding: 0 !important;
 }
 
