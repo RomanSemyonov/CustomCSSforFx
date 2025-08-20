@@ -219,7 +219,7 @@
 :root[uidensity="compact"] {
 	#nav-bar #nav-bar-customization-target > toolbaritem .unified-extensions-item-action-button {
 	  padding: 3px !important;
-	  margin: -2px !important
+	  /*margin: -2px !important*/
 	}
 }
 

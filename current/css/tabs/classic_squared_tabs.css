@@ -705,5 +705,5 @@
 }
 
 #tabbrowser-tabs[orient="horizontal"] {
-  padding-top: 1px !important;
+  padding-top: 0px !important;
 }
